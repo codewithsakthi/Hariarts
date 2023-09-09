@@ -1,0 +1,105 @@
+<app-header></app-header>
+
+<div appDisableDoubleClick>
+  <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
+    <mdb-carousel-item *ngFor="let imageUrl of images">
+      <img class="d-block w-100" [src]="imageUrl" alt="Slide" mdbPreloadImage>
+    </mdb-carousel-item>
+  </mdb-carousel>
+</div>
+
+<div class="container d-flex mt-4 p-4">
+	  <div class="card mb-3" style="width:fit-content">
+		<div class="row g-0">
+		  <div class="col-md-6">
+			<img
+			  src="../../assets/Profile.jpg"
+			  class="img-fluid rounded-start"
+			  alt="..."
+			/>
+		  </div>
+		  <div class="col-md-6">
+			<div class="card-body">
+			  <h1 class="card-title">Capturing Love and Moments: Our Story in Madurai</h1>
+			  <p class="card-text">
+				Successfully, we have been running Incredible photography in Madurai
+				for more than five years.
+			  </p>
+			  <p class="card-text">
+				<small class="text-muted">
+				  While comparing to other photographers, our wedding photography
+				  packages will be low cost and also will be premium quality. Once
+				  you visit our website then you will fall in love with the style of
+				  our photography and videos. That is why we have been receiving
+				  great responses from our customers til date. We have a team of
+				  wedding Photographers & Videographers, dedicated to create the
+				  most beautiful memories of your wedding day. We will make your
+				  precious moments look beautiful. We will complete your event more
+				  efficiently than you expected
+				</small>
+			  </p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+</div>
+
+<div class="container">
+	<h1 class="text-center"> What We Do</h1>
+	<br>
+	<div class="card-group">
+		<div class="card">
+		  <img src="../../assets/card1.jpg" class="card-img-top" alt="...">
+		  <div class="card-body">
+			<h5 class="card-title">Wedding</h5>
+			<p class="card-text">ove seems the swiftest but it is the slowest of all growths. No man or woman really knows what perfect love is until they have been married a quarter of a century.</p>
+		  </div>
+		</div>
+
+		<div class="card">
+		  <img src="../../assets/card3.jpeg" class="card-img-top" alt="...">
+		  <div class="card-body">
+			<h5 class="card-title">Life Style</h5>
+			<p class="card-text">Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma – which is living with the results of other people’s thinking.</p>
+		  </div>
+		</div>
+
+		<div class="card">
+			<img src="../../assets/card2.jpeg" class="card-img-top" alt="...">
+			<div class="card-body">
+			  <h5 class="card-title">Engagement</h5>
+			  <p class="card-text">When you realize you want to spend the rest of your life with somebody, you want the rest of your life to start as soon as possible.</p>
+			</div>
+	    </div>
+
+	</div>
+</div>
+
+<br>
+<hr>
+<div class="container">
+	<br>
+	<h1 class="text-center">Our Recent Collection</h1>
+	<br>
+	<br>
+	<app-collection></app-collection>
+</div>
+
+<br>
+<hr>
+
+<div class="container">
+	<app-blog></app-blog>
+</div>
+
+<br>
+
+<div class="container">
+	<app-testimonal></app-testimonal>
+</div>
+
+<br>
+<div class="fluid"> 
+	<img src="../../assets/ Wrapper.jpg" style="width: 100%; border: none; border-radius: 5px;">
+</div>
+<app-footer></app-footer>
