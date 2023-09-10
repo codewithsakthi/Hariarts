@@ -7,7 +7,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6" *ngFor="let video of videos">
-          <mat-card style="height: 500px; border-radius: 20px; padding: 20px; border: 3px;">
+          <mat-card style="height: 500px; border-radius: 20px; padding: 20px; border: 3px; background-color: aliceblue;" >
             <iframe style="border-radius: 20px;" [src]="video.safeVideoUrl" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
             <mat-card-content>
               <p>{{ video.title }}</p>
