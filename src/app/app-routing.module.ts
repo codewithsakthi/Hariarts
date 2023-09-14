@@ -7,6 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { BookComponent } from './book/book.component';
 import { VideosComponent } from './videos/videos.component';
+import { StoriesComponent } from './stories/stories.component';
 
 const routes: Routes = [
   { path:'Gallery',component:GalleryComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path:'Contact',component:ContactComponent },
   {path:'Blog',component:BlogsComponent},
   {path:'BookNow',component:BookComponent},
-  {path:'Videos',component:VideosComponent}
+  {path:'Videos',component:VideosComponent},
+  {path:'Stories',component:StoriesComponent}
 
 ];
 

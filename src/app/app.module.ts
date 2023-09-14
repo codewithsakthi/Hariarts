@@ -25,6 +25,7 @@ import { BookComponent } from './book/book.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { TestimonalComponent } from './home/testimonal/testimonal.component';
+import { StoriesComponent } from './stories/stories.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { TestimonalComponent } from './home/testimonal/testimonal.component';
     VideosComponent,
     BookComponent,
     TestimonalComponent,
+    StoriesComponent,
     
   ],
   imports: [
