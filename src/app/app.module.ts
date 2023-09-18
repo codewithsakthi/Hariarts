@@ -26,6 +26,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { TestimonalComponent } from './home/testimonal/testimonal.component';
 import { StoriesComponent } from './stories/stories.component';
+import { MomentsComponent } from './moments/moments.component';
+import { LightboxModule } from 'ngx-lightbox';
+import { AlbumComponent } from './stories/album/album.component';
 
 
 @NgModule({
@@ -47,6 +50,8 @@ import { StoriesComponent } from './stories/stories.component';
     BookComponent,
     TestimonalComponent,
     StoriesComponent,
+    MomentsComponent,
+    AlbumComponent,
     
   ],
   imports: [
@@ -57,7 +62,8 @@ import { StoriesComponent } from './stories/stories.component';
     MdbCarouselModule,
     HttpClientModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    LightboxModule
    ],
    
   providers: [],
