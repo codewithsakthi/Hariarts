@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="container">
+  <div class="row justify-content-center">
+    <h1 class="text-center">Gallery</h1>
+  </div>
+</div>
+<div class="gallery">
+    <div class="filter-buttons">
+      <button (click)="filterItems(null)" [class.active]="selectedTag === null">All</button>
+      <button (click)="filterItems('Wedding')" [class.active]="selectedTag === 'Wedding'">Wedding</button>
+      <button (click)="filterItems('Baby')" [class.active]="selectedTag === 'Baby'">Baby Portrait</button>
+      <button (click)="filterItems('Engagement')" [class.active]="selectedTag === 'Engagement'">Engagement</button>
+      <!-- Add more tag buttons as needed -->
+    </div>
+  
+    <div class="image-container">
+      <div class="image" *ngFor="let item of filteredItems">
+        <img [src]="item.imgSrc" alt="{{ item.tag }}">
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>

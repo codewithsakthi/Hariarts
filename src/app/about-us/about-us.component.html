@@ -1,0 +1,419 @@
+<app-header></app-header>
+
+<head>
+  <link rel="stylesheet"href="https://unpkg.com/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.0/components/teams/team-1/assets/css/team-1.css"/>
+</head>
+
+<section class="we-offer-area text-center bg-gray">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="site-heading text-center">
+                  <h2>What we <span>Offer</span></h2>
+                  <h4>What's you love</h4>
+              </div>
+          </div>
+      </div>
+          <div class="row our-offer-items less-carousel">
+              <!-- Single Item -->
+              <div class="col-md-4 col-sm-6 equal-height">
+                  <div class="item">
+                      <img src="../../assets/icons/ring.png" width="100px" style="object-fit: cover;">
+                      <h4>Engagement </h4>
+                      <p>
+                        Capturing Love Stories in Every Frame.
+                      </p>
+                  </div>
+              </div>
+              <!-- End Single Item -->
+
+              <!-- Single Item -->
+              <div class="col-md-4 col-sm-6 equal-height">
+                  <div class="item">
+                    <img src="../../assets/icons/wedding.png" width="100px" style="object-fit: cover;">
+
+                    <h4>Wedding</h4>
+                      <p>
+                        Cherishing Precious Moments of Innocence.
+                      </p>
+                  </div>
+              </div>
+              <!-- End Single Item -->
+
+              <!-- Single Item -->
+              <div class="col-md-4 col-sm-6 equal-height">
+                  <div class="item">
+                    <img src="../../assets/icons/baby.png" width="100px" style="object-fit: cover;">
+
+                    <h4>Baby Shower </h4>
+                      <p>
+                        Sealing Love in Every Click.
+                      </p>
+                  </div>
+              </div>
+              <!-- End Single Item -->
+
+              <!-- Single Item -->
+              <div class="col-md-4 col-sm-6 equal-height">
+
+                <div class="item">
+                  <img src="../../assets/icons/birthday.png" width="100px" style="object-fit: cover;">
+
+                      <h4>Birthday</h4>
+                      <p>
+                        Capturing Moments, Creating Memories.
+                      </p>
+                  </div>
+              </div>
+              <!-- End Single Item -->
+
+              <!-- Single Item -->
+              <div class="col-md-4 col-sm-6 equal-height">
+                  <div class="item">
+                    <img src="../../assets/icons/saree.png" width="100px" style="object-fit: cover;">
+
+                    <h4>Half Saree Ceremony</h4>
+                      <p>
+                        Celebrating Life's Milestones.
+                      </p>
+                  </div>
+              </div>
+              <!-- End Single Item -->
+
+              <!-- Single Item -->
+              <div class="col-md-4 col-sm-6 equal-height">
+
+                <div class="item">
+                  <img src="../../assets/icons/ear.png" width="100px" style="object-fit: cover;">
+
+                      <h4>Ear Piercing</h4>
+                      <p>
+                        Embracing the Journey to Adulthood.
+                      </p>
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-6 equal-height">
+                <div class="item">
+                  <img src="../../assets/icons/home1.png" width="100px" style="object-fit: cover;">
+                    <h4>House Warming Ceremony </h4>
+                    <p>
+                      Capturing Love Stories in Every Frame.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 equal-height">
+              <div class="item">
+                  <img src="../../assets/icons/anni.png" width="100px" style="object-fit: cover;">
+                  <h4>Anniversaaries</h4>
+                  <p>
+                    Capturing Love Stories in Every Frame.
+                  </p>
+              </div>
+          </div>
+          <div class="col-md-4 col-sm-6 equal-height">
+            <div class="item">
+                <img src="../../assets/icons/vlog.png" width="100px"  style="object-fit: cover;">
+                <h4>Vlog</h4>
+                <p>
+                  Capturing Love Stories in Every Frame.
+                </p>
+            </div>
+        </div>
+              <!-- End Single Item -->
+          </div>
+  </div>
+</section>
+
+<section class="bg-light py-3 py-md-5 py-xl-8">
+<div class="site-heading text-center">
+  <h2>Accomplishments Over the Years</h2>
+</div>
+<div class="container">
+  <div class="row">
+    <br />
+    <div class="col text-center">
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col">
+      <div class="counter">
+        <i class="fa-solid fa-camera fa-bounce" style="color: #b1d110;"></i>
+        <h2
+          class="timer count-title count-number"
+          [countUp]="count" [duration]="duration"
+        ></h2>
+        <p class="count-text">Projects Done</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="counter">
+        <i class="fa-solid fa-user fa-bounce" style="color: #b1d110;"></i>
+        <h2
+          class="timer count-title count-number"
+          [countUp]="count1" [duration]="duration"
+        ></h2>
+        <p class="count-text">Years of Experience</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="counter">
+        <i class="fa-solid fa-star fa-bounce" style="color: #b1d110;"></i>
+        <h2
+          class="timer count-title count-number"
+          [countUp]="count2" [duration]="duration"></h2>
+        <p class="count-text"> Award Winning </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container d-flex mt-4 p-4 hari">
+  <div class="card mb-3" style="width:fit-content">
+  <div class="row g-0">
+    <div class="col-md-6">
+    <img
+      src="../../assets/Profile.jpg"
+      class="img-fluid rounded-start"
+      alt="..."
+      width="720px"
+      height="100%"
+      style="overflow: hidden; border-radius: 20px;"
+    />
+    </div>
+    <div class="col-md-6">
+    <div class="card-body">
+      <h1 class="card-title">Capturing Love and Moments: Our Story in Madurai</h1>
+      <p class="card-text">
+      Successfully, we have been running Incredible photography in Madurai
+      for more than five years.
+      </p>
+      <p class="card-text">
+      <small class="text-muted">
+        While comparing to other photographers, our wedding photography
+        packages will be low cost and also will be premium quality. Once
+        you visit our website then you will fall in love with the style of
+        our photography and videos. That is why we have been receiving
+        great responses from our customers til date. We have a team of
+        wedding Photographers & Videographers, dedicated to create the
+        most beautiful memories of your wedding day. We will make your
+        precious moments look beautiful. We will complete your event more
+        efficiently than you expected
+      </small>
+      </p>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="responsive-container-block container">
+  <p class="text-blk team-head-text">
+    Our Team
+  </p>
+  <div class="responsive-container-block">
+    <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+      <div class="card">
+        <div class="team-image-wrapper">
+          <img class="team-member-image" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert1.png">
+        </div>
+        <p class="text-blk name">
+          Davis George
+        </p>
+        <p class="text-blk position">
+          CEO
+        </p>
+        <p class="text-blk feature-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.twitter.com" target="_blank">
+            <img class="twitter-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+          </a>
+          <a href="https://www.facebook.com" target="_blank">
+            <img class="facebook-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+      <div class="card">
+        <div class="team-image-wrapper">
+          <img class="team-member-image" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert2.png">
+        </div>
+        <p class="text-blk name">
+          Davis George
+        </p>
+        <p class="text-blk position">
+          CEO
+        </p>
+        <p class="text-blk feature-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.twitter.com" target="_blank">
+            <img class="twitter-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+          </a>
+          <a href="https://www.facebook.com" target="_blank">
+            <img class="facebook-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+      <div class="card">
+        <div class="team-image-wrapper">
+          <img class="team-member-image" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET7.14.png">
+        </div>
+        <p class="text-blk name">
+          Davis George
+        </p>
+        <p class="text-blk position">
+          CEO
+        </p>
+        <p class="text-blk feature-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.twitter.com" target="_blank">
+            <img class="twitter-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+          </a>
+          <a href="https://www.facebook.com" target="_blank">
+            <img class="facebook-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+      <div class="card">
+        <div class="team-image-wrapper">
+          <img class="team-member-image" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET7.15.png">
+        </div>
+        <p class="text-blk name">
+          Davis George
+        </p>
+        <p class="text-blk position">
+          CEO
+        </p>
+        <p class="text-blk feature-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.twitter.com" target="_blank">
+            <img class="twitter-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+          </a>
+          <a href="https://www.facebook.com" target="_blank">
+            <img class="facebook-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+      <div class="card">
+        <div class="team-image-wrapper">
+          <img class="team-member-image" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert2.png">
+        </div>
+        <p class="text-blk name">
+          Davis George
+        </p>
+        <p class="text-blk position">
+          CEO
+        </p>
+        <p class="text-blk feature-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.twitter.com" target="_blank">
+            <img class="twitter-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+          </a>
+          <a href="https://www.facebook.com" target="_blank">
+            <img class="facebook-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+      <div class="card">
+        <div class="team-image-wrapper">
+          <img class="team-member-image" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET7.14.png">
+        </div>
+        <p class="text-blk name">
+          Davis George
+        </p>
+        <p class="text-blk position">
+          CEO
+        </p>
+        <p class="text-blk feature-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.twitter.com" target="_blank">
+            <img class="twitter-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+          </a>
+          <a href="https://www.facebook.com" target="_blank">
+            <img class="facebook-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+      <div class="card">
+        <div class="team-image-wrapper">
+          <img class="team-member-image" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET7.15.png">
+        </div>
+        <p class="text-blk name">
+          Davis George
+        </p>
+        <p class="text-blk position">
+          CEO
+        </p>
+        <p class="text-blk feature-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.twitter.com" target="_blank">
+            <img class="twitter-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+          </a>
+          <a href="https://www.facebook.com" target="_blank">
+            <img class="facebook-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+      <div class="card">
+        <div class="team-image-wrapper">
+          <img class="team-member-image" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert1.png">
+        </div>
+        <p class="text-blk name">
+          Davis George
+        </p>
+        <p class="text-blk position">
+          CEO
+        </p>
+        <p class="text-blk feature-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.twitter.com" target="_blank">
+            <img class="twitter-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+          </a>
+          <a href="https://www.facebook.com" target="_blank">
+            <img class="facebook-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<link
+  rel="stylesheet"
+  href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"
+/>
+
+<!-- <h1 [countUp]="count" [duration]="duration"></h1> -->
+
+<app-footer></app-footer>
