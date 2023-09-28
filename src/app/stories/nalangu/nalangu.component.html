@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <br>
+                <br>
+                <img src="../../../assets/s/06. Nalungu.png" class="img-fluid" alt="Wedding Reception">
+                <p  style="font-family: cursive; font-size: 20px; text-align: justify;">
+                    Nalangu is a traditional South Indian ritual that holds significant cultural and social importance, particularly in the states of Tamil Nadu and Kerala. This ceremonial event is typically conducted during weddings and auspicious occasions, serving as a prelude to the main wedding ceremony. Nalangu is a joyous and lively affair where the bride and groom, as well as their respective families, come together to celebrate and bond.
+                </p>
+                <p style="font-family: cursive; font-size: 20px; text-align: justify">
+                    The highlight of Nalangu is the playful and light-hearted games that are an integral part of the ritual. These games are designed to break the ice between the bride and groom, allowing them to get to know each other better and ease any initial tension. Some common games include applying turmeric paste on each other's faces, exchanging playful banter, and even friendly competitions like tug-of-war or singing competitions. These activities are not only entertaining but also symbolize the spirit of cooperation and harmony that is essential for a successful marital union.
+                </p>           
+             </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="gallery-lightbox-container">
+            <div class="gallery">
+              <div *ngFor="let data of data; let i = index" class="gallery-img">
+                <img  [src]="data.imageSrc" [alt]="data.imageAlt">
+              </div>
+            </div>
+          
+          </div>
+    </div>
+</div>
+

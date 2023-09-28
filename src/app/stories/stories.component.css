@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('../../assets/stories/story.png'); /* Adjust the path as needed */
+    background-image: url('../../assets/stories/logg.png'); /* Adjust the path as needed */
     background-size:contain; /* Adjust to control how the image covers the container */
     background-position: center center; /* Center the image both horizontally and vertically */
     background-repeat: no-repeat; /* Prevent image from repeating */

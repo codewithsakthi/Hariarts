@@ -1,8 +1,10 @@
-<div class="container">
+<div class="container header1">
   <div class="row justify-content-center">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="../../assets/logo.jpg " width="250px" height="68px"></a>
+        <a class="navbar-brand" href="#"
+          ><img src="../../assets/logo.jpg " width="250px" height="68px"
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -38,100 +40,182 @@
               >
                 Portfolio
               </a>
-              <div class="dropdown-menu multi-column-dropdown" aria-labelledby="navbarDropdown">
+              <div
+                class="dropdown-menu multi-column-dropdown"
+                aria-labelledby="navbarDropdown"
+              >
                 <div class="container">
                   <div class="row">
                     <!-- Column 1 (Video) -->
- <!-- Column 1 (Video) -->
-<!-- Column 1 (Video) -->
-<div class="col-md-5">
-  <div class="video-container">
-    <!-- Embed your video here, e.g., using an iframe -->
-    <video
-      width="100%"
-      height="500px"
+                    <!-- Column 1 (Video) -->
+                    <!-- Column 1 (Video) -->
+                    <div class="col-md-5">
+                      <div class="video-container">
+                        <!-- Embed your video here, e.g., using an iframe -->
+                        <video
+                          width="100%"
+                          height="500px"
+                          controlsList="nodownload"
+                          autoplay
+                          loop
+                        >
+                          <source
+                            src="../../assets/Web-Video.mp4"
+                            type="video/mp4"
+                          />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                    </div>
 
-      controlsList="nodownload"
-      autoplay
-      loop
-    >
-      <source src="../../assets/Web-Video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</div>
-
-
-            
                     <!-- Column 2 (Wedding) -->
                     <div class="col-md-3">
                       <ul class="list-unstyled">
-                        <li><h5 class="dropdown-item" href="#" style="font-weight: bold; color: #333;"  >Wedding</h5></li>
-                        <li><a class="dropdown-item" href="#">South Indian</a></li>
-                        <li><a class="dropdown-item" href="#">Tamil Bramin</a></li>
+                        <li>
+                          <h5
+                            class="dropdown-item"
+                            href="#"
+                            style="font-weight: bold; color: #333"
+                          >
+                            Wedding
+                          </h5>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">South Indian</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Tamil Bramin</a>
+                        </li>
                         <li><a class="dropdown-item" href="#">Sourastra</a></li>
                         <li><a class="dropdown-item" href="#">Christian</a></li>
                         <li><a class="dropdown-item" href="#">Muslim</a></li>
                       </ul>
                     </div>
-            
+
                     <!-- Column 3 (Engagement) -->
                     <div class="col-md-3">
                       <ul class="list-unstyled">
-                        <li><h5 class="dropdown-item" href="#" style="font-weight: bold; color: #333;"  >Engagement</h5></li>
-                        <li><a class="dropdown-item" href="#">Submenu item 1</a></li>
-                        <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
+                        <li>
+                          <h5
+                            class="dropdown-item"
+                            href="#"
+                            style="font-weight: bold; color: #333"
+                          >
+                            Engagement
+                          </h5>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Submenu item 1</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Submenu item 2</a>
+                        </li>
                         <li>
                           <a class="dropdown-item" href="#">Submenu item 3</a>
-                          <ul class="list-unstyled">
-                            <li><a class="dropdown-item" href="#">Multi level 1</a></li>
-                            <li><a class="dropdown-item" href="#">Multi level 2</a></li>
-                          </ul>
                         </li>
-                        <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
-                        <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">Submenu item 4</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Submenu item 5</a>
+                        </li>
                       </ul>
                     </div>
-            
+
                     <!-- Column 4 (Outdoor) -->
                     <div class="col-md-3">
                       <ul class="list-unstyled">
-                        <li><h5 class="dropdown-item" href="#" style="font-weight: bold; color: #333;"  >Outdoor</h5></li>
-                        <li><a class="dropdown-item" href="#">Pre Wedding</a></li>
-                        <li><a class="dropdown-item" href="#">Post Wedding</a></li>
+                        <li>
+                          <h5
+                            class="dropdown-item"
+                            href="#"
+                            style="font-weight: bold; color: #333"
+                          >
+                            Outdoor
+                          </h5>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Pre Wedding</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Post Wedding</a>
+                        </li>
                       </ul>
                     </div>
                   </div>
                 </div>
               </div>
             </li>
-            
-            
-            
+
             <li class="nav-item">
               <a class="nav-link active" routerLink="/Gallery">Gallery</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" routerLink="/Stories">Stories</a>
+            <!-- Existing navigation code -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link active dropdown-toggle"
+                href="#"
+                id="storiesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Stories
+              </a>
+              <!-- Dropdown menu for Stories -->
+              <div class="dropdown-menu" aria-labelledby="storiesDropdown">
+                <a class="dropdown-item" routerLink="/Reception">Reception</a>
+                <a class="dropdown-item" routerLink="/Kasi-Yathirai"
+                  >Kasi Yathirai</a
+                >
+                <a class="dropdown-item" routerLink="/Muhurtham">Muhurtham</a>
+                <a class="dropdown-item" routerLink="/MaalaiMatrudal"
+                  >Maalai Maatrudal</a
+                >
+                <a class="dropdown-item" routerLink="/Oonjal">Oonjal</a>
+                <a class="dropdown-item" routerLink="/Nalangu">Nalangu</a>
+                <a class="dropdown-item" routerLink="/Sangeeeth">Sangeeth</a>
+                <a class="dropdown-item" routerLink="/Mehandi">Mehndi</a>
+                <a class="dropdown-item" routerLink="/Haldi">Haldi</a>
+                <a class="dropdown-item" routerLink="/HalfSaree">Half Saree</a>
+
+                <!-- Add more stories as needed -->
+              </div>
             </li>
+            <!-- Add a new list item for the Stories dropdown -->
+
             <li class="nav-item">
               <a class="nav-link active" routerLink="/Moments">Moments</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" routerLink="/Videos" >Videos</a>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link active dropdown-toggle"
+                href="#"
+                id="storiesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Videos
+              </a>
+              <!-- Dropdown menu for Stories -->
+              <div class="dropdown-menu" aria-labelledby="storiesDropdown">
+                <a class="dropdown-item" routerLink="/Reels">Reels</a>
+                <a class="dropdown-item" routerLink="/CinematicHighlights"
+                  >Cinematic Highlights</a
+                >
+                <a class="dropdown-item" routerLink="/CinematicTeaser"
+                  >Cinematic Teaser</a
+                >
+              </div>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link active"  routerLink="/Blog" >Blog</a>
-            </li> -->
             <li class="nav-item">
               <a class="nav-link active" routerLink="/BookNow">Book Now</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" routerLink="/Contact">Contact</a>
             </li>
-            <li>
-              
-            </li>
+            <li></li>
           </ul>
         </div>
       </div>

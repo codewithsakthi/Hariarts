@@ -6,12 +6,14 @@
   border: 1px solid #ddd; /* Add a border */
   border-radius: 5px; /* Add border radius for rounded corners */
   transition: transform 0.2s ease-in-out; /* Add a hover effect */
-
+  padding: 20px;
+margin-right: 20px;
   /* Center the card content vertically and horizontally */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 /* Add space around the images */
@@ -50,4 +52,39 @@
   .card {
     width: calc(25% - 20px); /* Adjust the card width for large screens */
   }
+}
+
+/* Style individual cards */
+.card {
+  width: 100%; /* Initially, cards take up 100% width on small screens */
+  margin-bottom: 20px; /* Add margin to separate cards */
+  box-shadow: 0px 4px 6px rgba(13, 145, 206, 0.1); /* Add a subtle shadow */
+  border: 1px solid #ddd; /* Add a border */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  transition: transform 0.2s ease-in-out; /* Add a hover effect */
+
+  /* Center the card content vertically and horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add space around the images */
+.card .card-img-top {
+  padding: 10px; /* Adjust the padding as needed */
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.card-text{
+  align-items:baseline;
+
+  
+}
+.card-title{
+  margin-bottom: 20px;
+}
+.navbar {
+  background-color: transparent !important;
+  border-bottom: none;
 }

@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <br>
+                <br>
+                <img src="../../../assets/s/09. Haldi.png" class="img-fluid" alt="Wedding Reception">
+                <p  style="font-family: cursive; font-size: 20px; text-align: justify;">
+                    Haldi is an important pre-wedding ceremony in Hindu weddings, and it is also known as the turmeric ceremony. The tradition is mostly followed in North India, where the bride and groom are covered in turmeric paste to cleanse them before the marriage. The haldi paste is made by grinding turmeric and sandalwood, mixed with other ingredients, to form a thick paste. It is believed that turmeric helps brighten the skin and adding a glow to the bride and groom. Besides its beauty benefits, haldi also has properties to heal the skin and has been used in traditional Ayurvedic medicine to treat many health conditions.                </p>
+                <p style="font-family: cursive; font-size: 20px; text-align: justify">
+                    The haldi ceremony is a joyous occasion where the bride's and groom's families come together and take part in the rituals. During the ceremony, the bride and groom sit on separate wooden stools, and the family members apply the paste to their entire body. The ceremony is followed by a ritual bath to wash off the paste, and the couple wears yellow clothes to honor the color of turmeric. The yellow color symbolizes the purity, sanctity, and fertility of the couple and is considered auspicious in Hindu culture. In India, the Haldi ceremony holds a significant place, where it is celebrated with grandeur and enthusiasm, and it remains an essential ritual in many Indian weddings.
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="gallery-lightbox-container">
+            <div class="gallery">
+              <div *ngFor="let data of data; let i = index" class="gallery-img">
+                <img  [src]="data.imageSrc" [alt]="data.imageAlt">
+              </div>
+            </div>
+          
+          </div>
+    </div>
+</div>
+

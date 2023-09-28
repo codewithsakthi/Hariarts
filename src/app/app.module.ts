@@ -29,6 +29,19 @@ import { StoriesComponent } from './stories/stories.component';
 import { MomentsComponent } from './moments/moments.component';
 import { LightboxModule } from 'ngx-lightbox';
 import { AlbumComponent } from './stories/album/album.component';
+import { ReceptionComponent } from './stories/reception/reception.component';
+import { KasiComponent } from './stories/kasi/kasi.component';
+import { MuhurtComponent } from './stories/muhurt/muhurt.component';
+import { OonjalComponent } from './stories/oonjal/oonjal.component';
+import { NalanguComponent } from './stories/nalangu/nalangu.component';
+import { SangeethComponent } from './stories/sangeeth/sangeeth.component';
+import { MehndiComponent } from './stories/mehndi/mehndi.component';
+import { HaldiComponent } from './stories/haldi/haldi.component';
+import { MaternityComponent } from './stories/maternity/maternity.component';
+import { MaalaiComponent } from './stories/maalai/maalai.component';
+import { ReelsComponent } from './videos/reels/reels.component';
+import { CineteaseComponent } from './videos/cinetease/cinetease.component';
+import { CinehighComponent } from './videos/cinehigh/cinehigh.component';
 
 
 @NgModule({
@@ -52,6 +65,19 @@ import { AlbumComponent } from './stories/album/album.component';
     StoriesComponent,
     MomentsComponent,
     AlbumComponent,
+    ReceptionComponent,
+    KasiComponent,
+    MuhurtComponent,
+    OonjalComponent,
+    NalanguComponent,
+    SangeethComponent,
+    MehndiComponent,
+    HaldiComponent,
+    MaternityComponent,
+    MaalaiComponent,
+    ReelsComponent,
+    CineteaseComponent,
+    CinehighComponent,
     
   ],
   imports: [

@@ -1,0 +1,28 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <br>
+                <br>
+                <img src="../../../assets/s/01. Reception.png" class="img-fluid" alt="Wedding Reception">
+                <p  style="font-family: cursive; font-size: 20px; text-align: justify; ">
+                    In today's digital age, social media has become an essential part of our daily lives, with Instagram being a prominent platform for social sharing. For a cinematic production house like <b>Hari Arts Cinematic Studio</b>, Instagram serves as a vital tool for displaying their artistry. Another compelling content format they can leverage is cinematic highlights.                </p>
+                <p style="font-family: cursive; font-size: 20px; text-align: justify">
+                    Cinematic highlights are condensed reels of some of the most captivating moments from a film, project, or a body of work. These highlights are meticulously curated to showcase the essence, beauty, and emotional depth of the content. Often lasting between 5 to 10 minutues, cinematic highlights are perfect for sharing on Instagram's dynamic features like stories and reels. By creating these engaging highlights, Hari Arts Cinematic Studio can not only demonstrate their storytelling expertise and technical finesse but also provide a quick yet powerful glimpse into the heart of their cinematic creations. In conclusion, cinematic highlights are an effective promotional tool that allows production houses like Hari Arts Cinematic Studio to offer a compelling taste of their artistic vision, with Instagram offering an ideal platform to captivate and engage a broader audience.                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="gallery-lightbox-container">
+            <div class="gallery">
+              <div *ngFor="let data of data; let i = index" class="gallery-img">
+                <a [href]="data.imageAlt" target="_blank">
+                    <img  [src]="data.imageSrc" >
+                </a>
+              </div>
+            </div>
+          
+          </div>
+    </div>
+</div>

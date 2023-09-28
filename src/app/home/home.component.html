@@ -1,70 +1,129 @@
+<style>
+	.custom-aspect-ratio-img {
+	  display: block;
+	  width: 100%;
+	  height: auto; /* This ensures the image maintains its original aspect ratio */
+	}
+  
+	.custom-aspect-ratio-img-4-3 {
+	  padding-bottom: 75%; /* 4:3 aspect ratio (3 / 4 * 100%) */
+	}
+  
+	.custom-aspect-ratio-img-16-9 {
+	  padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100%) */
+	}
+  </style>
+  <head>
+	<link rel="stylesheet"href="https://unpkg.com/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.0/components/teams/team-1/assets/css/team-1.css"/>
+	<link
+  rel="stylesheet"
+  href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"
+/>
+
+  </head>
 <app-header></app-header>
+<div class="home">
 
-<div appDisableDoubleClick>
-  <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
-    <mdb-carousel-item *ngFor="let imageUrl of images">
-      <img class="d-block w-100" [src]="imageUrl" alt="Slide" mdbPreloadImage>
-    </mdb-carousel-item>
-  </mdb-carousel>
-</div>
+	<div appDisableDoubleClick>
 
+		<div class="container-fluid">
+			<mdb-carousel class="carousel slide carousel-fade"  [animation]="'slide'" [interval]="4000">
+				<mdb-carousel-item *ngFor="let imageUrl of images">
+				  <img class="d-block w-100 " [src]="imageUrl" alt="Slide" mdbPreloadImage>
+				</mdb-carousel-item>
+			  </mdb-carousel>
 
-<div class="container">
-	<h1 class="text-center"> What We Do</h1>
-	<br>
-	<div class="card-group">
-		<div class="card">
-		  <img src="../../assets/card1.jpg" class="card-img-top" alt="...">
-		  <div class="card-body">
-			<h5 class="card-title">Wedding</h5>
-			<p class="card-text">ove seems the swiftest but it is the slowest of all growths. No man or woman really knows what perfect love is until they have been married a quarter of a century.</p>
-		  </div>
 		</div>
-
-		<div class="card">
-		  <img src="../../assets/card3.jpeg" class="card-img-top" alt="...">
-		  <div class="card-body">
-			<h5 class="card-title">Life Style</h5>
-			<p class="card-text">Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma – which is living with the results of other people’s thinking.</p>
-		  </div>
-		</div>
-
-		<div class="card">
-			<img src="../../assets/card2.jpeg" class="card-img-top" alt="...">
-			<div class="card-body">
-			  <h5 class="card-title">Engagement</h5>
-			  <p class="card-text">When you realize you want to spend the rest of your life with somebody, you want the rest of your life to start as soon as possible.</p>
-			</div>
-	    </div>
-
 	</div>
+	  
+	  
+	<div class="container">
+		<h1 class="text-center">Our Efforts</h1>
+		<br>
+		<div class="card-group" style="margin-bottom: 20px;">
+			<div class="card">
+				<img src="../../assets/new five.jpg" class="card-img-top custom-aspect-ratio-img custom-aspect-ratio-img-4-3" alt="...">
+				<div class="card-body">
+					<h5 class="card-title text-center">Engagement</h5>
+					<p class="card-text">Love seems the swiftest but it is the slowest of all growths. No man or woman really knows what perfect love is until they have been married a quarter of a century.</p>
+				</div>
+			</div>
+	
+			<div class="card">
+				<img src="../../assets/new five.jpg" class="card-img-top custom-aspect-ratio-img custom-aspect-ratio-img-4-3" alt="...">
+				<div class="card-body">
+					<h5 class="card-title text-center">Wedding</h5>
+					<p class="card-text">Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.</p>
+				</div>
+			</div>
+	
+			<div class="card">
+				<img src="../../assets/new five.jpg" class="card-img-top custom-aspect-ratio-img custom-aspect-ratio-img-4-3" alt="...">
+				<div class="card-body">
+					<h5 class="card-title text-center">Baby Shower</h5>
+					<p class="card-text">When you realize you want to spend the rest of your life with somebody, you want the rest of your life to start as soon as possible.</p>
+				</div>
+			</div>
+	
+		</div>
+	
+		<div class="card-group">
+			<div class="card">
+				<img src="../../assets/new five.jpg" class="card-img-top custom-aspect-ratio-img custom-aspect-ratio-img-4-3" alt="...">
+				<div class="card-body">
+					<h5 class="card-title text-center">Half Saree Ceremony</h5>
+					<p class="card-text">Love seems the swiftest but it is the slowest of all growths. No man or woman really knows what perfect love is until they have been married a quarter of a century.</p>
+				</div>
+			</div>
+	
+			<div class="card">
+				<img src="../../assets/new five.jpg" class="card-img-top custom-aspect-ratio-img custom-aspect-ratio-img-4-3" alt="...">
+				<div class="card-body">
+					<h5 class="card-title text-center">Portfolio</h5>
+					<p class="card-text">Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.</p>
+				</div>
+			</div>
+	
+			<div class="card">
+				<img src="../../assets/new five.jpg" class="card-img-top custom-aspect-ratio-img custom-aspect-ratio-img-4-3" alt="...">
+				<div class="card-body">
+					<h5 class="card-title text-center">Pre/Post Wedding</h5>
+					<p class="card-text">When you realize you want to spend the rest of your life with somebody, you want the rest of your life to start as soon as possible.</p>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+	
+	  
+	  <br>
+	  <hr>
+	  <div class="container">
+		  <br>
+		  <h1 class="text-center">Our Recent Collection</h1>
+		  <br>
+		  <br>
+		  <app-collection></app-collection>
+	  </div>
+	  
+	  <br>
+	  <hr>
+	  
+	  <div class="container">
+		  <app-blog></app-blog>
+	  </div>
+	  
+	  <br>
+	  
+	  <div class="container">
+		  <app-testimonal></app-testimonal>
+	  </div>
+	  
+	  <br>
+	  <div class="fluid"> 
+		  <img src="../../assets/Wrapper.jpg" style="width: 100%; border: none; border-radius: 5px;">
+	  </div>
+	  <app-footer></app-footer>
 </div>
 
-<br>
-<hr>
-<div class="container">
-	<br>
-	<h1 class="text-center">Our Recent Collection</h1>
-	<br>
-	<br>
-	<app-collection></app-collection>
-</div>
-
-<br>
-<hr>
-
-<div class="container">
-	<app-blog></app-blog>
-</div>
-
-<br>
-
-<div class="container">
-	<app-testimonal></app-testimonal>
-</div>
-
-<br>
-<div class="fluid"> 
-	<img src="../../assets/ Wrapper.jpg" style="width: 100%; border: none; border-radius: 5px;">
-</div>
-<app-footer></app-footer>
