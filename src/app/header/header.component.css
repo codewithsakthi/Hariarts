@@ -48,9 +48,14 @@ background: transparent;
     background-color: transparent !important; /* Remove background color */
     border: none; /* Remove the border */
     z-index: 100; /* Higher z-index value to bring the navbar to the front */
+    position: absolute;
 
   }
+  .navbar img{
 
+    position: absolute;
+left: 15;
+  }
   /* Custom CSS for hover effect */
 
   /* Style the GIFs at the end of each column */
