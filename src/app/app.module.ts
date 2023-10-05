@@ -42,6 +42,18 @@ import { MaalaiComponent } from './stories/maalai/maalai.component';
 import { ReelsComponent } from './videos/reels/reels.component';
 import { CineteaseComponent } from './videos/cinetease/cinetease.component';
 import { CinehighComponent } from './videos/cinehigh/cinehigh.component';
+import { Header1Component } from './header1/header1.component';
+import { VgCoreModule } from '@videogular/ngx-videogular/core';
+import { VgControlsModule } from '@videogular/ngx-videogular/controls';
+import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
+import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
+import { PackagesComponent } from './packages/packages.component';
+import { TradComponent } from './videos/trad/trad.component';
+import { TradhighComponent } from './videos/tradhigh/tradhigh.component';
+import { CommonModule } from '@angular/common';
+import { ChunkPipe } from '../app/packages/chunk.pipe'; // Import your custom pipe
+
+
 
 
 @NgModule({
@@ -78,6 +90,11 @@ import { CinehighComponent } from './videos/cinehigh/cinehigh.component';
     ReelsComponent,
     CineteaseComponent,
     CinehighComponent,
+    Header1Component,
+    PackagesComponent,
+    TradComponent,
+    TradhighComponent,
+    ChunkPipe,
     
   ],
   imports: [
@@ -89,7 +106,12 @@ import { CinehighComponent } from './videos/cinehigh/cinehigh.component';
     HttpClientModule,
     MatGridListModule,
     MatCardModule,
-    LightboxModule
+    LightboxModule,
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule,
+    CommonModule,
    ],
    
   providers: [],

@@ -23,6 +23,8 @@ import { MaternityComponent } from './stories/maternity/maternity.component';
 import { ReelsComponent } from './videos/reels/reels.component';
 import { CineteaseComponent } from './videos/cinetease/cinetease.component';
 import { CinehighComponent } from './videos/cinehigh/cinehigh.component';
+import { PackagesComponent } from './packages/packages.component';
+import { TradComponent } from './videos/trad/trad.component';
 
 
 const routes: Routes = [
@@ -50,7 +52,10 @@ const routes: Routes = [
   {path:'Reels',component:ReelsComponent},
   {path:'CinematicHighlights',component:CinehighComponent},
   {path:'CinematicTeaser',component:CineteaseComponent},
+  {path:'TraditionalVideo',component:TradComponent},
+  {path:'TraditionalHighlight',component:TradComponent},
 
+{path:'Packages',component:PackagesComponent},
 
 
 

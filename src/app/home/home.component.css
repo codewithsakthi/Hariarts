@@ -84,6 +84,13 @@ margin-right: 20px;
 .card-title{
   margin-bottom: 20px;
 }
+.text-center{
+  padding-top: 2%;
+}
+.card-group{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
 .navbar {
   background-color: transparent !important;
   border-bottom: none;
@@ -263,4 +270,26 @@ color: #fff;
   
 .carousel-fade .carousel-item.active {
   opacity: 1;
+}
+.video-player-wrapper {
+  max-width: 100%; /* Set the maximum width of the video player wrapper to 100% of its parent container */
+  position: relative; /* Ensure that the aspect ratio is maintained */
+  padding-bottom: 2%; /* 16:9 aspect ratio for responsive scaling */
+}
+
+video {
+  max-width: 100%; /* Ensure the video element scales with its parent */
+  height: auto; /* Allow the video's height to adjust based on its width */
+  display: block; /* Remove any default inline display */
+}
+
+
+@media (max-width: 768px) {
+
+  .video-player-wrapper {
+    max-width: 100%; /* Set the maximum width of the video player wrapper to 100% of its parent container */
+    position: relative; /* Ensure that the aspect ratio is maintained */
+    padding-bottom: 2%; /* 16:9 aspect ratio for responsive scaling */
+    padding-top: 24%;
+  }
 }
