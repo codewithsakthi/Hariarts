@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HammerModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { OAuthModule, AuthConfig, OAuthModuleConfig, OAuthService } from 'angular-oauth2-oidc';
 
@@ -51,8 +51,24 @@ import { PackagesComponent } from './packages/packages.component';
 import { TradComponent } from './videos/trad/trad.component';
 import { TradhighComponent } from './videos/tradhigh/tradhigh.component';
 import { CommonModule } from '@angular/common';
-import { ChunkPipe } from '../app/packages/chunk.pipe'; // Import your custom pipe
+import { ChunkPipe } from '../app/packages/chunk.pipe';
+import { InviteComponent } from './videos/invite/invite.component';
+import { SavedateComponent } from './videos/savedate/savedate.component';
+import { PrepostComponent } from './videos/prepost/prepost.component';
+import { StorytellingComponent } from './videos/storytelling/storytelling.component';
+import { VlogComponent } from './vlog/vlog.component';
+import { MeenakshiComponent } from './vlog/meenakshi/meenakshi.component';
+import { AzhagarComponent } from './vlog/azhagar/azhagar.component';
+import { VandiyurComponent } from './vlog/vandiyur/vandiyur.component';
+import { KoodalComponent } from './vlog/koodal/koodal.component';
+import { KrishnanComponent } from './vlog/krishnan/krishnan.component';
+import { KamakshiComponent } from './vlog/kamakshi/kamakshi.component';
+import { VenkatachalapathiComponent } from './vlog/venkatachalapathi/venkatachalapathi.component';
+import { BalagiComponent } from './vlog/balagi/balagi.component';
+import { NavaratriComponent } from './vlog/navaratri/navaratri.component';
+import { OtherComponent } from './vlog/other/other.component'; // Import your custom pipe
 
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 
@@ -95,6 +111,21 @@ import { ChunkPipe } from '../app/packages/chunk.pipe'; // Import your custom pi
     TradComponent,
     TradhighComponent,
     ChunkPipe,
+    InviteComponent,
+    SavedateComponent,
+    PrepostComponent,
+    StorytellingComponent,
+    VlogComponent,
+    MeenakshiComponent,
+    AzhagarComponent,
+    VandiyurComponent,
+    KoodalComponent,
+    KrishnanComponent,
+    KamakshiComponent,
+    VenkatachalapathiComponent,
+    BalagiComponent,
+    NavaratriComponent,
+    OtherComponent,
     
   ],
   imports: [
@@ -112,6 +143,8 @@ import { ChunkPipe } from '../app/packages/chunk.pipe'; // Import your custom pi
     VgOverlayPlayModule,
     VgBufferingModule,
     CommonModule,
+    HammerModule,
+    MatExpansionModule
    ],
    
   providers: [],

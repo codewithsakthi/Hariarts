@@ -25,6 +25,21 @@ import { CineteaseComponent } from './videos/cinetease/cinetease.component';
 import { CinehighComponent } from './videos/cinehigh/cinehigh.component';
 import { PackagesComponent } from './packages/packages.component';
 import { TradComponent } from './videos/trad/trad.component';
+import { InviteComponent } from './videos/invite/invite.component';
+import { SavedateComponent } from './videos/savedate/savedate.component';
+import { PrepostComponent } from './videos/prepost/prepost.component';
+import { StorytellingComponent } from './videos/storytelling/storytelling.component';
+import { VlogComponent } from './vlog/vlog.component';
+import { MeenakshiComponent } from './vlog/meenakshi/meenakshi.component';
+import { AzhagarComponent } from './vlog/azhagar/azhagar.component';
+import { VandiyurComponent } from './vlog/vandiyur/vandiyur.component';
+import { KoodalComponent } from './vlog/koodal/koodal.component';
+import { KrishnanComponent } from './vlog/krishnan/krishnan.component';
+import { KamakshiComponent } from './vlog/kamakshi/kamakshi.component';
+import { VenkatachalapathiComponent } from './vlog/venkatachalapathi/venkatachalapathi.component';
+import { BalagiComponent } from './vlog/balagi/balagi.component';
+import { NavaratriComponent } from './vlog/navaratri/navaratri.component';
+import { OtherComponent } from './vlog/other/other.component';
 
 
 const routes: Routes = [
@@ -54,8 +69,27 @@ const routes: Routes = [
   {path:'CinematicTeaser',component:CineteaseComponent},
   {path:'TraditionalVideo',component:TradComponent},
   {path:'TraditionalHighlight',component:TradComponent},
+  {path:'InvitationVideo',component:InviteComponent},
+  {path:'SaveDate',component:SavedateComponent},
+  {path:'PrePostWedding',component:PrepostComponent},
+  {path:'StoryTelling',component:StorytellingComponent},
+  {path:"Vlog",component:VlogComponent},
+  {path:"MeenakshiAmman",component:MeenakshiComponent},
+  {path:"AzhagarKovil",component:AzhagarComponent},
+  {path:"VandiyurMariamman",component:VandiyurComponent},
+  {path:"KoodalAzhagar",component:KoodalComponent},
+  {path:"Southkrishnan",component:KrishnanComponent},
+  {path:"KamakshiEkambareswarar",component:KamakshiComponent},
+  {path:"ArulmiguVenkatachalapathi",component:VenkatachalapathiComponent},
+  {path:"balagivenkateshwara",component:BalagiComponent},
+  {path:"NavaratriFestival",component:NavaratriComponent},
+  {path:"Other",component:OtherComponent},
+
+
+
 
 {path:'Packages',component:PackagesComponent},
+
 
 
 

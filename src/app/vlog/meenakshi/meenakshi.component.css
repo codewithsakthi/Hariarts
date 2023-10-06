@@ -1,0 +1,156 @@
+
+.p{
+  line-height: 1.6em;
+}
+.mat-mdc-form-field + .mat-mdc-form-field {
+    margin-left: 8px;
+  }
+  mat-accordion {
+    background-color: #eaedf2; /* Set your desired light background color */
+  }
+  /* Set the background color for the mat-accordion */
+.mat-accordion {
+  background-color: #f0f0f0; /* Set your desired light background color */
+}
+
+/* Set the text color for the mat-accordion content */
+.mat-accordion p {
+  color: #ffffff; /* Set your desired text color */
+}
+
+/* Set the background color for the mat-expansion-panel header */
+.mat-expansion-panel-header {
+  background-color: #f0f0f0; /* Set your desired header background color */
+}
+
+/* Set the text color for the mat-expansion-panel header */
+.mat-expansion-panel-header .mat-panel-title h1 {
+  color: #eaedf2; /* Set your desired header text color */
+}
+.mat-expansion-panel-header{
+    color: #eaedf2; /* Set your desired header text color */
+  }
+
+/* Override the default hover effect and customize header color */
+.custom-header {
+    background-color:#333; /* Set your desired background color */
+    transition: none; /* Disable hover effect by removing the transition property */
+    margin-top: 15px;
+  }
+  
+  /* Style the title text */
+  .custom-title {
+    font-size: 30px;
+    padding-bottom: 15px;
+    text-align: center;
+    color: #333; /* Set your desired text color */
+  }
+  
+  /* Style the content text */
+  .custom-content{
+    font-family: cursive;
+    font-size: 16px;
+    text-align: justify;
+    color: #eaedf2; /* Set your desired text color */
+  }
+  /* Gallery Container */
+.gallery {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Filter Buttons */
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .filter-buttons button {
+    margin: 5px;
+    padding: 6px 12px; /* Adjust padding to make the buttons shorter */
+    background-color: #14c45d; /* Change the button color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .filter-buttons button.active {
+    background-color: #333; /* Change the active button color */
+  }
+  
+  /* Hover Effect */
+  .filter-buttons button:hover {
+    background-color: #ff4123; /* Change the hover color */
+  }
+  
+  /* Active Button Hover Effect */
+  .filter-buttons button.active:hover {
+    background-color: #222; /* Change the active button hover color */
+  }
+  
+  
+  /* Image Container */
+  .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Individual Images */
+  .image {
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image img {
+    max-width: 100%;
+    height: 340px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+  
+  .image img:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Stylish Overlay */
+  .image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .image:hover::before {
+    opacity: 1;
+  }
+  
+  /* Caption on Hover */
+  .image::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .image:hover::after {
+    opacity: 1;
+  }
+  

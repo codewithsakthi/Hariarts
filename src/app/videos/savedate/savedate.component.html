@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <br>
+                <br>
+                <img src="../../../assets/s/01. Reception.png" class="img-fluid" alt="Wedding Reception">
+                <p  style="font-family: cursive; font-size: 20px; text-align: justify; ">
+                    In today's digital age, social media has become an essential part of our daily lives, with Instagram being a prominent platform for social sharing. For a cinematic production house like<b>Hari Arts Cinematic Studio</b> , Instagram serves as a vital tool for displaying their artistry. One of the most effective content formats for this purpose is the cinematic teaser.                </p>
+                <p style="font-family: cursive; font-size: 20px; text-align: justify">
+                    A cinematic teaser is a brief yet captivating video that offers a tantalizing glimpse into an upcoming film, project, or creative endeavor. It harnesses the power of storytelling, visual aesthetics, and sound to intrigue and excite the audience. These teasers typically range from 60 to 90 seconds in duration, making them ideal for sharing on Instagram's dynamic features like stories and reels. By crafting compelling cinematic teasers, Hari Arts Cinematic Studio can not only showcase their storytelling prowess and technical excellence but also generate anticipation and interest among their target audience. In conclusion, cinematic teasers are a potent promotional tool that allows production houses like Hari Arts Cinematic Studio to showcase their artistic vision, and Instagram provides the perfect platform to captivate and engage a broader viewership.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="gallery-lightbox-container">
+            <div class="gallery">
+              <div *ngFor="let data of data; let i = index" class="gallery-img">
+                <a [href]="data.imageAlt" target="_blank">
+                    <img  [src]="data.imageSrc" >
+                </a>
+              </div>
+            </div>
+          
+          </div>
+    </div>
+</div>

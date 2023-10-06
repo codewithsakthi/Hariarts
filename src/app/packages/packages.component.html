@@ -1,12 +1,29 @@
 <app-header></app-header>
 
 
-  
-  
+    <div class="container-fluid">
+        <div class="gallery-lightbox-container">
+            <div class="gallery">
+              <div *ngFor="let data of data; let i = index" class="gallery-img">
+                    <img  [src]="data.imageSrc" >
+              </div>
+            </div>
+          
+          </div>
+    </div>
+    <!-- <button  class="btn-lightbox-carousel btn-prev" (click)="prevImage()" >
+        <i class="fa fa-arrow-circle-left icon-prev"></i>
+      </button>
+    <button *ngIf="controls && currentIndex < totalImageCount - 1" class="btn-lightbox-carousel btn-next" (click)="nextImage()">
+        <i class="fa fa-arrow-circle-right icon-next"></i>
+      </button> -->
+
+      
+      
 <br>
 <div class="container price justify-content-center">
     <div class="row justify-content-center" >
-        <h1 class="text-center" >Grand Event<p class="animated-text">Click to See the whole story</p></h1>
+        <h1 class="text-center" >Grand Event</h1>
         <div class="col-md-3 col-sm-6">
             <div class="pricing-table-3 basic">
                 <div class="pricing-table-header">
@@ -17,10 +34,10 @@
                 <div class="price"><strong> Rs.35000</strong></div>
                 <div class="pricing-body">
                     <ul class="pricing-table-ul">
-                        <li><i class="fa fa-cloud"></i><b>Traditional Photos</b></li>
-                        <li routerLink="/TraditionalVideo" title="Click to view"><i class="fa fa-database"></i><b>Traditional Videos</b></li>
+                        <li><i class="fa fa-cloud"></i><b>Traditional Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/TraditionalVideo" title="Click to view"><i class="fa fa-database"></i><b>Traditional Videos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
 
-                        <li routerLink="/TraditionalHighlight" class="not-avail"><i class="fa fa-clock-o"></i><b>Highlight Videos</b></li>
+                        <li routerLink="/TraditionalHighlight" class="not-avail"><i class="fa fa-clock-o"></i><b>Highlight Videos⠀⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
                         <li class="not-avail"><i class="fa fa-clock-o"></i><b>12 x 36 Album Size<br>(50 sheet / 300 pics)</b></li>
                         <li class="not-avail"><i class="fa fa-envelope"></i><b> 15 x 10 Photo Frame(1)</b></li>
                     </ul><a routerLink="/BookNow" class="view-more">Book Now</a></div>
@@ -36,10 +53,10 @@
                 <div class="price"><strong>Rs.50000</strong></div>
                 <div class="pricing-body">
                     <ul class="pricing-table-ul">
-                        <li><i class="fa fa-cloud"></i><b>Traditional Photos</b></li>
-                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>Traditional Videos</b></li>
-                        <li routerLink="/Moments" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Photos</b></li>
-                        <li routerLink="/TraditionalHighlight"class="not-avail"><i class="fa fa-clock-o"></i><b>Highlight Videos</b></li>
+                        <li><i class="fa fa-cloud"></i><b>Traditional Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>Traditional Videos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/Moments" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Photos⠀⠀⠀⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/TraditionalHighlight"class="not-avail"><i class="fa fa-clock-o"></i><b>Highlight Videos⠀⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
                         <li class="not-avail"><i class="fa fa-clock-o"></i><b>12 x 36 Album Size<br>(50 sheet / 300 Pics)</b></li>
                         <li class="not-avail"><i class="fa fa-envelope"></i><b> 15 x 10 Photo Frame(1)</b></li>
                     </ul><a routerLink="/BookNow" class="view-more">Book Now</a></div>
@@ -56,13 +73,13 @@
 
                 <div class="pricing-body">
                     <ul class="pricing-table-ul">
-                        <li><i class="fa fa-cloud"></i><b>Traditional Photos</b></li>
-                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>Traditional Videos</b></li>
-                        <li routerLink="/Moments" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Photos</b></li>
-                        <li routerLink="/CinematicHighlights" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Videos</b></li>
+                        <li><i class="fa fa-cloud"></i><b>Traditional Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>Traditional Videos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/Moments" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Photos⠀⠀⠀⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/CinematicHighlights" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Videos⠀⠀⠀⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
 
-                        <li routerLink="/CinematicHighlights" class="not-avail"><i class="fa fa-clock-o"></i><b>Cinematic Highlight</b></li>
-                        <li routerLink="/Reels" class="not-avail"><i class="fa fa-clock-o"></i><b>Reels Video</b></li>
+                        <li routerLink="/CinematicHighlights" class="not-avail"><i class="fa fa-clock-o"></i><b>Cinematic Highlight⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/Reels" class="not-avail"><i class="fa fa-clock-o"></i><b>Reels Video⠀⠀⠀⠀⠀⠀⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
 
                         <li class="not-avail"><i class="fa fa-clock-o"></i><b>12 x 36 Album Size<br>(50 sheet / 300 pics)</b></li>
                         <li class="not-avail"><i class="fa fa-envelope"></i><b> 12 x 18 Photo Frame(1) & Calendar</b></li>
@@ -80,14 +97,14 @@
 
                 <div class="pricing-body">
                     <ul class="pricing-table-ul">
-                        <li><i class="fa fa-cloud"></i><b>Traditional Photos</b></li>
-                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>Traditional Videos</b></li>
-                        <li routerLink="/Moments" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Photos</b></li>
-                        <li routerLink="/CinematicHighlights" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Videos</b></li>
+                        <li><i class="fa fa-cloud"></i><b>Traditional Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>Traditional Videos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/Moments" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/CinematicHighlights" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Videos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
                         <li class="not-avail"><i class="fa fa-clock-o"></i><b>Drone Shoot</b></li>
-                        <li routerLink="/CinematicHighlights" class="not-avail"><i class="fa fa-clock-o"></i><b> Cinematic Highlight</b></li>
-                        <li routerLink="/CinematicTeaser"class="not-avail"><i class="fa fa-clock-o"></i><b>Cinematic Teaser</b></li>
-                        <li routerLink="/Reels" class="not-avail"><i class="fa fa-clock-o"></i><b>Reels Video</b></li>
+                        <li routerLink="/CinematicHighlights" class="not-avail"><i class="fa fa-clock-o"></i><b> Cinematic Highlight⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/CinematicTeaser"class="not-avail"><i class="fa fa-clock-o"></i><b>Cinematic Teaser⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/Reels" class="not-avail"><i class="fa fa-clock-o"></i><b>Reels Video⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
                         <li class="not-avail"><i class="fa fa-clock-o"></i><b>12 x 36 Album Size<br>(50 sheet / 300 pics)</b></li>
                         <li class="not-avail"><i class="fa fa-envelope"></i><b> 12 x 18 Photo Frame(2) & Calendar</b></li>
                     </ul><a routerLink="/BookNow" class="view-more">Book Now</a></div>
@@ -96,11 +113,11 @@
     </div>
 </div>
 
-<img src="../../assets/package/our.jpg">
+<img src="../../assets/package/our.jpg" class="img-fluid" alt="Responsive Image">>
 
 <div class="container price justify-content-center">
     <div class="row justify-content-center" >
-        <h1 class="text-center" >Small Event<p class="animated-text">Click to See the whole story</p></h1>
+        <h1 class="text-center" >Small Event</h1>
         <div class="col-md-3 col-sm-6">
             <div class="pricing-table-3 basic">
                 <div class="pricing-table-header">
@@ -111,9 +128,9 @@
                 <div class="price"><strong> Rs.20000</strong></div>
                 <div class="pricing-body">
                     <ul class="pricing-table-ul">
-                        <li><i class="fa fa-cloud animated-text"></i><b>Traditional Photos</b></li>
-                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>Traditional Videos</b></li>
-                        <li routerLink="/TraditionalHighlight" class="not-avail"><i class="fa fa-clock-o"></i><b>Highlight Videos</b></li>
+                        <li><i class="fa fa-cloud animated-text"></i><b>Traditional Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>Traditional Videos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/TraditionalHighlight" class="not-avail"><i class="fa fa-clock-o"></i><b>Highlight Videos⠀⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
                         <li class="not-avail"><i class="fa fa-clock-o"></i><b>28 x 10 Album Size<br>(32 sheet/150 Pics)</b></li>
                         <li class="not-avail"><i class="fa fa-envelope"></i><b> 12 x 8 Photo Frame(1)</b></li>
                     </ul><a routerLink="/BookNow" class="view-more">Book Now</a></div>
@@ -129,10 +146,10 @@
                 <div class="price"><strong>Rs.30000</strong></div>
                 <div class="pricing-body">
                     <ul class="pricing-table-ul">
-                        <li><i class="fa fa-cloud"></i><b>Traditional Photos</b></li>
-                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>Traditional Videos</b></li>
-                        <li routerLink="/Moments" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Photos</b></li>
-                        <li routerLink="/TraditionalHighlight" class="not-avail"><i class="fa fa-clock-o"></i><b>Highlight Videos</b></li>
+                        <li><i class="fa fa-cloud"></i><b>Traditional Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>Traditional Videos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/Moments" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/TraditionalHighlight" class="not-avail"><i class="fa fa-clock-o"></i><b>Highlight Videos⠀⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
                         <li class="not-avail"><i class="fa fa-clock-o"></i><b>28 x 10 Album Size<br>(32 sheet/150 Pics)</b></li>
                         <li class="not-avail"><i class="fa fa-envelope"></i><b> 15 x 10 Photo Frame(1)</b></li>
                     </ul><a routerLink="/BookNow" class="view-more">Book Now</a></div>
@@ -149,13 +166,13 @@
 
                 <div class="pricing-body">
                     <ul class="pricing-table-ul">
-                        <li><i class="fa fa-cloud"></i><b>Traditional Photos</b></li>
-                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>Traditional Videos</b></li>
-                        <li routerLink="/Moments" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Photos</b></li>
-                        <li routerLink="/CinematicHighlights" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Videos</b></li>
+                        <li><i class="fa fa-cloud"></i><b>Traditional Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>Traditional Videos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/Moments" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/CinematicHighlights" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Videos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
 
-                        <li routerLink="/TraditionalHighlight" class="not-avail"><i class="fa fa-clock-o"></i><b>Highlight Videos</b></li>
-                        <li routerLink="/Reels" class="not-avail"><i class="fa fa-clock-o"></i><b>Reels Video</b></li>
+                        <li routerLink="/TraditionalHighlight" class="not-avail"><i class="fa fa-clock-o"></i><b>Highlight Videos⠀⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/Reels" class="not-avail"><i class="fa fa-clock-o"></i><b>Reels Video⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
 
                         <li class="not-avail"><i class="fa fa-clock-o"></i><b>28 x 10 Album Size<br>(32 sheet/150 Pics)</b></li>
                         <li class="not-avail"><i class="fa fa-envelope"></i><b> 12 x 18 Photo Frame(1) & Calendar</b></li>
@@ -173,14 +190,14 @@
 
                 <div class="pricing-body">
                     <ul class="pricing-table-ul">
-                        <li><i class="fa fa-cloud"></i><b>Traditional Photos</b></li>
-                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>Traditional Videos</b></li>
-                        <li routerLink="/Moments" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Photos</b></li>
-                        <li routerLink="/CinematicHighlights" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Videos</b></li>
+                        <li><i class="fa fa-cloud"></i><b>Traditional Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>Traditional Videos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/Moments" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/CinematicHighlights" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Videos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
                         <li class="not-avail"><i class="fa fa-clock-o"></i><b>Drone Shoot</b></li>
-                        <li routerLink="/TraditionalHighlight" class="not-avail"><i class="fa fa-clock-o"></i><b>Highlight Videos</b></li>
-                        <li routerLink="/CinematicTeaser" class="not-avail"><i class="fa fa-clock-o"></i><b>Cinematic Teaser</b></li>
-                        <li routerLink="/Reels" class="not-avail"><i class="fa fa-clock-o"></i><b>Reels Video</b></li>
+                        <li routerLink="/TraditionalHighlight" class="not-avail"><i class="fa fa-clock-o"></i><b>Highlight Videos⠀⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/CinematicTeaser" class="not-avail"><i class="fa fa-clock-o"></i><b>Cinematic Teaser⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/Reels" class="not-avail"><i class="fa fa-clock-o"></i><b>Reels Video⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
                         <li class="not-avail"><i class="fa fa-clock-o"></i><b>28 x 10 Album Size<br>(32 sheet/150 Pics)</b></li>
                         <li class="not-avail"><i class="fa fa-envelope"></i><b> 12 x 18 Photo Frame(2) & Calendar</b></li>
                     </ul><a routerLink="/BookNow" class="view-more">Book Now</a></div>
@@ -198,101 +215,92 @@
 <img src="../../assets/package/collage.jpg">
 
 
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<div class="container price">
-    <div class="row text-center">
-        <div class="col-lg-3">
-            <div class="card plan-card">
-                <div class="card-block">
-                    <div class="pt-3 pb-3">
-                        <h1><i class="fa fa-plane plan-icon"></i></h1>
-                        <h6 class="text-uppercase text-primary">Outdoor Shoot</h6>
-                    </div>
-                    <div>
-                        <h3 class="plan-price padding-b-15">Rs.40000</h3>
-                        <div class="plan-div-border"></div>
-                    </div>
-                    <div class="plan-features pb-3 mt-3 text-muted padding-t-b-30">
-                        <b><p style="font-family: Open Sans;">Pre / Post Wedding </p></b>
-                        <b><p>Invitation Video</p></b>
-                        <b><p>Save the Date Video</p></b>
-                        <b><p>Story Telling Video</p></b>
-                        <b><p>Album Size : 28 x 10 <br>(32 sheet/100 Pics)</p></b>
-                        <a routerLink="/BookNow" class="btn btn-primary">Book Now</a>
-                    </div>
+<div class="container price justify-content-center">
+    <div class="row justify-content-center" >
+        <h1 class="text-center" >Out Door Event</h1>
+        <div class="col-md-3 col-sm-6">
+            <div class="pricing-table-3 basic">
+                <div class="pricing-table-header">
+                    <h4><strong>Outdoor <br>Shoot</strong></h4>
+                </div>
+                <div class="price"><strong> Rs.40000</strong></div>
+                <div class="pricing-body">
+                    <ul class="pricing-table-ul">
+                        <li routerLink="/PrePostWedding" ><i class="fa fa-cloud"></i><b>Pre / Post Wedding⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/InvitationVideo"><i class="fa fa-database"></i><b>  Invitation Video⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/SaveDate" class="not-avail"><i class="fa fa-clock-o"></i><b>Save the Date Video⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/StoryTelling" class="not-avail"><i class="fa fa-clock-o"></i><b> Story Telling Video⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li class="not-avail"><i class="fa fa-clock-o"></i><b> Album Size: 28 x 10 <br>(32 sheet/100 Pics)</b></li>
+                    </ul>
+                    <a routerLink="/BookNow" class="view-more">Book Now</a>
                 </div>
             </div>
         </div>
-        <div class="col-lg-3">
-            <div class="card plan-card">
-                <div class="card-block">
-                    <div class="pt-3 pb-3">
-                        <h1><i class="fa fa-plane plan-icon"></i></h1>
-                        <h6 class="text-uppercase text-primary">Outdoor Shoot (Madurai)</h6>
-                    </div>
-                    <div>
-                        <h3 class="plan-price padding-b-15">Rs.30000</h3>
-
-                        <div class="plan-div-border"></div>
-                    </div>
-                    <div class="plan-features pb-3 mt-3 text-muted padding-t-b-30">
-                        <b><p style="font-family: Open Sans;">Pre / Post Wedding </p></b>
-                        <b><p>Invitation Video</p></b>
-                        <b><p>Save the Date Video</p></b>
-                        <b><p>Story Telling Video</p></b>
-                        <b><p>Album Size : 28 x 10 <br>(32 sheet/100 Pics)</p></b>
-                        <a routerLink="/BookNow" class="btn btn-primary">Book Now</a>
-                    </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="pricing-table-3 premium">
+                <div class="pricing-table-header">
+                    <h4><strong>Outdoor Shoot</strong></h4>
+                </div>
+                <div class="price"><strong>Rs.30000</strong></div>
+                <div class="pricing-body">
+                    <ul class="pricing-table-ul">
+                        <li routerLink="/PrePostWedding" ><i class="fa fa-cloud"></i><b>Pre / Post Wedding ⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/InvitationVideo"><i class="fa fa-database"></i><b>  Invitation Video⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/SaveDate" class="not-avail"><i class="fa fa-clock-o"></i><b>Save the Date Video⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/StoryTelling" class="not-avail"><i class="fa fa-clock-o"></i><b> Story Telling Video⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li class="not-avail"><i class="fa fa-clock-o"></i><b> Album Size: 28 x 10 <br>(32 sheet/100 Pics)</b></li>
+                    </ul>
+                    <a routerLink="/BookNow" class="view-more">Book Now</a>
                 </div>
             </div>
         </div>
-
-        <div class="col-lg-3">
-            <div class="card plan-card">
-                <div class="card-block">
-                    <div class="pt-3 pb-3">
-                        <h1><i class="fa fa-umbrella plan-icon bg-pink"></i></h1>
-                        <h6 class="text-uppercase text-pink">Save The Date</h6>
-                    </div>
-                    <div>
-                        <h3 class="plan-price padding-b-15">Rs.15000</h3>
-                        <div class="plan-div-border"></div>
-                    </div>
-                    <div class="plan-features pb-3 mt-3 text-muted padding-t-b-30">
-                        <b> <p>Pre / Post Wedding </p></b>
-                        <b><p>Invitation Video</p></b>
-                        <b><p>Save the Date Video</p></b>
-                        <b><p>No album will be provided</p></b>
-                        <a routerLink="/BookNow" class="btn btn-pink">Book Now</a>
-                    </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="pricing-table-3 business">
+                <div class="pricing-table-header">
+                    <h4><strong>Save The Date</strong></h4>
+                </div>
+                <div class="price"><strong>Rs.15000</strong></div>
+                <div class="pricing-body">
+                    <ul class="pricing-table-ul">
+                        <li routerLink="/PrePostWedding" ><i class="fa fa-cloud"></i><b>Pre / Post Wedding ⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/InvitationVideo"><i class="fa fa-database"></i><b>  Invitation Video⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/SaveDate" class="not-avail"><i class="fa fa-clock-o"></i><b>Save the Date Video⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li class="not-avail"><i class="fa fa-envelope"></i><b> No album will be provided</b></li>
+                    </ul>
+                    <a routerLink="/BookNow" class="view-more">Book Now</a>
                 </div>
             </div>
         </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="pricing-table-3 plat">
+                <div class="pricing-table-header">
+                    <h4><strong>Wedding  Events</strong></h4>
+                </div>
+                <div class="price"><strong><span>  <br></span></strong></div>
+                <div class="pricing-body">
+                    <ul class="pricing-table-ul">
+                        <li><i class="fa fa-cloud"></i><b>Live Telecast Video</b></li>
+                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>360 Video</b></li>
+                        <li routerLink="/Moments" class="not-avail"><i class="fa fa-clock-o"></i><b>Instant Photo booth</b></li>
+                        <li routerLink="/CinematicHighlights" class="not-avail"><i class="fa fa-clock-o"></i><b>Wall Led</b></li>
 
-        <div class="col-lg-3">
-            <div class="card plan-card">
-                <div class="card-block">
-                    <div class="pt-3 pb-3">
-                        <h1><i class="fa fa-cube plan-icon bg-teal"></i></h1>
-                        <h6 class="text-uppercase text-teal">Wedding & Corporate Events</h6>
-                    </div>
-                    <div>
-                        <div class="plan-div-border"></div>
-                    </div>
-                    <div class="plan-features pb-3 mt-3 text-muted padding-t-b-30">
-                        <b><p>Live Telecast Video</p></b>
-                        <b><p>360 Video</p></b>
-                        <b><p>Instant Photo booth</p></b>
-                        <b><p>Wall Led</p></b>
-              
-                        <a routerLink="/BookNow" class="btn btn-teal">Book Now</a>
-                 <br>          <br>
-
-                    </div>
+                    </ul>
+                    <a routerLink="/BookNow" class="view-more">Book Now</a>
                 </div>
             </div>
         </div>
-
+    </div>
 </div>
-  
+
+
+
+<div class="container-fluid">
+    <div class="gallery-lightbox-container">
+        <div class="gallery">
+          <div *ngFor="let data of data; let i = index" class="gallery-img">
+                <img  [src]="data.imageSrc" >
+          </div>
+        </div>
+      
+      </div>
 </div>

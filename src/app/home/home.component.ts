@@ -1,5 +1,7 @@
 import { Component,ElementRef, Renderer2, ViewChild  } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
+import { HammerModule, HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -22,6 +24,7 @@ export class HomeComponent {
 
 
   ];
+  currentImageIndex: number = 0;
 
   text =" Welcome to Hari Arts"
   @ViewChild('video') video!: ElementRef;
