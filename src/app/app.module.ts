@@ -69,8 +69,8 @@ import { NavaratriComponent } from './vlog/navaratri/navaratri.component';
 import { OtherComponent } from './vlog/other/other.component'; // Import your custom pipe
 
 import {MatExpansionModule} from '@angular/material/expansion';
-
-
+import { MatSelectModule } from '@angular/material/select'; // Import MatSelectModule
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -144,7 +144,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
     VgBufferingModule,
     CommonModule,
     HammerModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatSelectModule,
+    FormsModule
    ],
    
   providers: [],

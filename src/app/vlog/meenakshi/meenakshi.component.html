@@ -74,34 +74,83 @@
         </div>
     </div>
     <br>
-    <div class="container">
-        <div class="row justify-content-center">
-        </div>
-      </div>
-      <div class="gallery">
+
+<div class="gallery">
           <div class="filter-buttons">
             <button (click)="filterItems(null)" [class.active]="selectedTag === null">All</button>
-            <button (click)="filterItems('Day-1')" [class.active]="selectedTag === 'Day-1'">Day-1</button>
-            <button (click)="filterItems('Day-2')" [class.active]="selectedTag === 'Day-2'">Day-2</button>
-            <button (click)="filterItems('Day-3')" [class.active]="selectedTag === 'Day-3'">Day-3</button>
-            <button (click)="filterItems('Day-4')" [class.active]="selectedTag === 'Day-4'">Day-4</button>
-            <button (click)="filterItems('Day-5')" [class.active]="selectedTag === 'Day-5'">Day-5</button>
-            <button (click)="filterItems('Day-6')" [class.active]="selectedTag === 'Day-6'">Day-6</button>
-            <button (click)="filterItems('Day-7')" [class.active]="selectedTag === 'Day-7'">Day-7</button>
-            <button (click)="filterItems('Day-8')" [class.active]="selectedTag === 'Day-8'">Day-8</button>
-            <button (click)="filterItems('Day-9')" [class.active]="selectedTag === 'Day-9'">Day-9</button>
-            <button (click)="filterItems('Day-10')" [class.active]="selectedTag === 'Day-10'">Day-10</button>
+            <button (click)="filterItems('2023/1')" [class.active]="selectedTag === '2023/1'">Day-1</button>
+            <button (click)="filterItems('2023/2')" [class.active]="selectedTag === '2023/2'">Day-2</button>
+            <button (click)="filterItems('2023/3')" [class.active]="selectedTag === '2023/3'">Day-3</button>
+            <button (click)="filterItems('2023/4')" [class.active]="selectedTag === '2023/4'">Day-4</button>
+            <button (click)="filterItems('2023/5')" [class.active]="selectedTag === '2023/5'">Day-5</button>
+            <button (click)="filterItems('2023/6')" [class.active]="selectedTag === '2023/6'">Day-6</button>
+            <button (click)="filterItems('2023/7')" [class.active]="selectedTag === '2023/7'">Day-7</button>
+            <button (click)="filterItems('2023/8')" [class.active]="selectedTag === '2023/8'">Day-8</button>
+            <button (click)="filterItems('2023/9')" [class.active]="selectedTag === '2023/9'">Day-9</button>
+            <button (click)="filterItems('2023/10')" [class.active]="selectedTag === '2023/10'">Day-10</button>
 
-            <!-- Add more tag buttons as needed -->
           </div>
         
-          <div class="image-container">
-            <div class="image" *ngFor="let item of filteredItems">
-              <img [src]="item.imgSrc" alt="{{ item.tag }}">
+          <!-- <div class="image-container">
+            <div class="image" *ngFor="let item of filteredItems let i = index">
+              <img  (click)="onPreviewImage(i)" [src]="item.imgSrc" alt="{{ item.tag }}">
             </div>
           </div>
-      </div>
+          <div *ngIf="showMask" class="lightbox" animation2>
+            <span *ngIf="showCount" class="count">{{ currentIndex + 1 }} / {{ totalImageCount }}</span>
+            <button *ngIf="previewImage" class="close-btn" (click)="onClosePreview()" >
+              <i class="fas fa-times"></i>
+            </button>
+            
+            <button *ngIf="controls && currentIndex > 0" class="btn-lightbox-carousel btn-prev" (click)="prevImage()" >
+              <i class="fa fa-arrow-circle-left icon-prev"></i>
+            </button>
+            
+            <button *ngIf="controls && currentIndex < totalImageCount - 1" class="btn-lightbox-carousel btn-next" (click)="nextImage()">
+              <i class="fa fa-arrow-circle-right icon-next"></i>
+            </button>
+        
+            <div *ngIf="previewImage" class="lightbox-img"
+            [@animation]="{value:'visible'}"
+            (@animation.done)="onAnimatedEnd($event)"
+            >
+              
+              <img [src]="currentLightboxImage.imgSrc" >
+            </div>
+          </div> -->
 
+          <div class="gallery-lightbox-container">
+            <div class="gallery1">
+              <div *ngFor="let data of filteredItems; let i = index" class="gallery-img">
+                <img (click)="onPreviewImage(i)" [src]="data.imgSrc">
+              </div>
+              
+            </div>
+          
+            <div *ngIf="showMask" class="lightbox" animation2>
+              <span *ngIf="showCount" class="count">{{ currentIndex + 1 }} / {{ filteredItems.length }}</span>
+              <button *ngIf="previewImage" class="close-btn" (click)="onClosePreview()">
+                <i class="fas fa-times"></i>
+              </button>
+          
+              <button *ngIf="controls && currentIndex > 0" class="btn-lightbox-carousel btn-prev" (click)="prevImage()">
+                <i class="fa fa-arrow-circle-left icon-prev"></i>
+              </button>
+          
+              <button *ngIf="controls && currentIndex < filteredItems.length - 1" class="btn-lightbox-carousel btn-next" (click)="nextImage()">
+                <i class="fa fa-arrow-circle-right icon-next"></i>
+              </button>
+          
+              <div *ngIf="previewImage" class="lightbox-img"
+                [@animation]="{value:'visible'}"
+                (@animation.done)="onAnimatedEnd($event)"
+              >
+                <img [src]="currentLightboxImage.imgSrc">
+              </div>
+            </div>
+          </div>
+          
+</div>
 
 
       
