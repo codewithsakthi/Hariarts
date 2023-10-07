@@ -331,4 +331,35 @@
     border-radius: .35rem;
   }
 
+  .image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  .ytv-image {
+    width: 100%;
+    height: 700px;
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+  
+  .youtube-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2); /* Increase the icon size */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: red; /* Set the color of the YouTube icon to red */
+
+  }
+  
+  .image-container:hover .ytv-image {
+    filter: blur(5px); /* Blur the image background */
+    transform: scale(1.1); /* Adjust the scale factor as needed for the image */
+  }
+  
+  .image-container:hover .youtube-icon {
+    opacity: 1;
+  }
   
