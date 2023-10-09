@@ -1,60 +1,6 @@
 
-.p{
-  line-height: 1.6em;
-}
-.mat-mdc-form-field + .mat-mdc-form-field {
-    margin-left: 8px;
-  }
-  mat-accordion {
-    background-color: #eaedf2; /* Set your desired light background color */
-  }
-  /* Set the background color for the mat-accordion */
-.mat-accordion {
-  background-color: #f0f0f0; /* Set your desired light background color */
-}
-
-/* Set the text color for the mat-accordion content */
-.mat-accordion p {
-  color: #ffffff; /* Set your desired text color */
-}
-
-/* Set the background color for the mat-expansion-panel header */
-.mat-expansion-panel-header {
-  background-color: #f0f0f0; /* Set your desired header background color */
-}
-
-/* Set the text color for the mat-expansion-panel header */
-.mat-expansion-panel-header .mat-panel-title h1 {
-  color: #eaedf2; /* Set your desired header text color */
-}
-.mat-expansion-panel-header{
-    color: #eaedf2; /* Set your desired header text color */
-  }
-
-/* Override the default hover effect and customize header color */
-.custom-header {
-    background-color:#333; /* Set your desired background color */
-    transition: none; /* Disable hover effect by removing the transition property */
-    margin-top: 15px;
-  }
-  
-  /* Style the title text */
-  .custom-title {
-    font-size: 30px;
-    padding-bottom: 15px;
-    text-align: center;
-    color: #333; /* Set your desired text color */
-  }
-  
-  /* Style the content text */
-  .custom-content{
-    font-family: cursive;
-    font-size: 16px;
-    text-align: justify;
-    color: #eaedf2; /* Set your desired text color */
-  }
   /* Gallery Container */
-.gallery {
+  .gallery {
     text-align: center;
     padding: 20px;
   }
@@ -331,35 +277,42 @@
     border-radius: .35rem;
   }
 
-  .image-container {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-  }
-  
-  .ytv-image {
-    width: 100%;
-    height: 700px;
-    transition: filter 0.3s ease, transform 0.3s ease;
-  }
-  
-  .youtube-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(2); /* Increase the icon size */
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    color: red; /* Set the color of the YouTube icon to red */
+ /* Add this CSS to your component's CSS file or global styles */
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 700px; /* Set a maximum width for the image */
+  margin: 0 auto; /* Center the image horizontally */
+  overflow: hidden; /* Ensure the image doesn't overflow its container */
+}
 
+.image-container img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove extra space beneath the image */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Smooth transition for the overlay */
+}
+
+.image-container:hover .overlay {
+  opacity: 1; /* Show the overlay on hover */
+}
+
+/* Media query for smaller screens (adjust as needed) */
+@media screen and (max-width: 768px) {
+  .image-container {
+    max-width: 100%; /* Full-width container on smaller screens */
   }
-  
-  .image-container:hover .ytv-image {
-    filter: blur(5px); /* Blur the image background */
-    transform: scale(1.1); /* Adjust the scale factor as needed for the image */
-  }
-  
-  .image-container:hover .youtube-icon {
-    opacity: 1;
-  }
-  
+}
