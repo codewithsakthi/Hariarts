@@ -34,11 +34,12 @@ export class VandiyurComponent {
 panelOpenState = false;
 images: any[] = [];
 
-selectedYear: string = '2023'; // Default selected year
+selectedYear: string = ''; // Default selected year
 
-selectYear(event: Event) {
-const target = event.target as HTMLSelectElement;
-this.selectedYear = target.value;
+selectYear(event: any) {
+  this.selectedYear = event.target.value;
+  
+  console.log('Selected year: ' + this.selectedYear);
 }
 
 redirectToYouTube() {
@@ -56,7 +57,6 @@ this.isMobileScreen = window.innerWidth < 768;
 
 constructor(private googleDriveService: AuthService) {}
 
-// In your component.ts file
 activeButtonIndex: number | null = null;
 
 previewImage = false;
@@ -74,8 +74,20 @@ ylink:string='';
 ngOnInit()
 {
   this.totalImageCount=this.images.length; 
-  
+  this.selectedYear='2023'
+  if (this.selectedYear === '2023') {
+    this.day('1kNp3LxVhTDFbMTUBoDdnQ_DleYu3FzSW', '../../../assets/Vlog/vandiyur/1.jpg', 'https://www.youtube.com/watch?v=lslrih65FmU&t=21s', 'பூச்சொரிதல் விழா', 0);
+  } else if (this.selectedYear === '2024') {
+    this.day('', '', '', '', 0);
+  }
+  this.activeButtonIndex = 0;
+
+
 }
+
+
+  
+
 
 day(folderId:string,thumb:string,ylink:string,title: string,index: number){
 this.googleDriveService.setFolderId(folderId);

@@ -15,7 +15,7 @@
   .filter-buttons button {
     margin: 5px;
     padding: 6px 12px; /* Adjust padding to make the buttons shorter */
-    background-color: #14c45d; /* Change the button color */
+    background-color: #333; /* Change the button color */
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -23,7 +23,7 @@
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   .active-button {
-    background-color: #ff4123; /* Change this to your desired active button color */
+    background-color: #af0909; /* Change this to your desired active button color */
     color: #ffffff; /* Change this to your desired text color for active button */
   }
   
@@ -33,7 +33,7 @@
   
   /* Hover Effect */
   .filter-buttons button:hover {
-    background-color: #ff4123; /* Change the hover color */
+    background-color: #af0909; /* Change the hover color */
   }
   
   /* Active Button Hover Effect */
