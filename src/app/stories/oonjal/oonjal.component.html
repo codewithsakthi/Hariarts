@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <br>
+                <br>
+                <img src="../../../assets/s/05. Oonjal.png" class="img-fluid" alt="Wedding Reception">
+                <p  style="font-family: cursive; font-size: 20px; text-align: justify;">
+                    In Indian weddings, the Oonjal ceremony holds significant cultural and traditional value. The term ‘Oonjal’ refers to a swing, and it is set up in a beautifully decorated area of the wedding venue where the bride and the groom sit together. The Oonjal is decorated with vibrant flowers and ethnic accessories, adding a touch of elegance and grandeur to the entire setup. This ceremony holds a traditional significance as it marks the beginning of the wedding ceremony and symbolizes the start of a new journey for the bride and groom.                </p>
+                <p  style="font-family: cursive; font-size: 20px; text-align: justify">
+                    The Oonjal ceremony is a prominent feature in South Indian weddings and is followed by the Kanyadaan, which marks the bride's giving away to the groom by her father. During the Oonjal ceremony, the bride and groom sit on the ornamental swing, and the women of the bride’s family come and swing them back and forth, usually singing classical Indian music. The swinging motion of the Oonjal symbolizes the ups and downs that the couple will face in their married life, as well as the importance of support and love to help overcome any obstacles. The Oonjal ceremony is an essential part of the wedding where the couple's families come together to bless them, and it marks the beginning of a new journey in their life together as a couple.
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="gallery-lightbox-container">
+            <div class="gallery">
+              <div *ngFor="let data of sortImagesByFilename(images); let i = index" class="gallery-img">
+                <img  [src]="getImageUrl(data.id)" (click)="onPreviewImage(i)">
+              </div>
+            </div>
+            <div *ngIf="showMask" class="lightbox" animation2 #swipeElement (touchstart)="onTouchStart($event)"
+            (touchend)="onTouchEnd($event)" (window:keydown)="onKeyDown($event)" >
+            <span *ngIf="showCount" class="count">{{ currentIndex + 1 }} / {{ images.length }}</span>
+            <button *ngIf="previewImage" class="close-btn">
+              <i class="fa-thin fa-rotate fa-spin" style="color: #ffffff;"></i>
+            </button>
+            
+            <div *ngIf="previewImage" class="lightbox-img"
+              [@animation]="{value:'visible'}"
+              (@animation.done)="onAnimatedEnd($event)">
+              <img [src]="getImageUrl(currentLightboxImage.id) " (click)="closeLightbox()">
+            </div> 
+            </div>
+          </div>
+    </div>
+</div>
+

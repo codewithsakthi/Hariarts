@@ -1,0 +1,40 @@
+<app-header></app-header>
+<div class="container1" style="left: 0;right:0" *ngIf="!verification">
+  <div class="top"></div>
+  <div class="bottom"></div>
+  <div class="center">
+    <h2>Please Sign In</h2>
+    <input type="email" [(ngModel)]="email" placeholder="Email" (ngModelChange)="setOtpButtons()" />
+    <input type="password" [(ngModel)]="password" placeholder="Password" (ngModelChange)="setOtpButtons()"/>
+    <h2>&nbsp;</h2>
+  </div>
+</div>
+<div class="home">
+<div class="container home" *ngIf="verification" style="left: 0;right:0">
+  <div *ngIf="!selectedFolder">
+    <!-- Folder view -->
+    <div class="row">
+      <div *ngFor="let folder of folders" class="col-md-4">
+        <ng-container *ngIf="!imageLoaded">
+          <!-- Loading animation with spinner -->
+          <div class="loading-animation">
+            <div ></div>
+                <img  src="../../../../assets/preloader.svg" alt="Loading Spinner">
+            </div>
+        </ng-container>
+        <a (click)="navigateToAnotherComponent(folder.id)"
+        >
+          <div class="card folder-card bezel-less-card home" >
+            <img [src]="getThumbnailUrl(folder)" class="card-img-top folder-thumbnail" (load)="imageLoaded = true" (error)="imageLoaded = false">
+            <div *ngIf="imageLoaded" class="card-body text-center">
+              <h5 style="color: #FFA700; text-align: center;  " class=" text-center paragraph">{{ folder.name }}</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+</div>

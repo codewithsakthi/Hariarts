@@ -1,0 +1,48 @@
+<app-header></app-header>
+<div class="filter-buttons home" >
+  <button style="color: #43A047;" class="filter-button" routerLink="/TraditionalVideo" >Traditional Video</button>
+  <button style="color: #43A047;"class="filter-button"  routerLink="/TraditionalHighlight" >Traditional Highlight </button>
+  <button style="color: #43A047;"class="filter-button"  routerLink="/CinematicTeaser" > Cinematic Teaser</button>
+  <button style="color: #43A047;"class="filter-button"  routerLink="/CinematicHighlights" >Cinematic Highlights</button>
+    <button style="color: #43A047;" class="filter-button" routerLink="/Reels" >Reels</button>
+  <button style="color: #43A047;"class="filter-button"  routerLink="/InvitationVideo" >Invitation Video </button>
+  <button style="color: #43A047;"class="filter-button"  routerLink="/SaveDate" >Save Date Video</button>
+  <button style="color: #43A047;"class="filter-button"  routerLink="/PrePostWedding" >Pre / Post Video</button>
+  <button style="color: #43A047;"class="filter-button"  routerLink="/StoryTelling" >Story Telling</button>
+
+</div>
+<div class="home container-fluid home">
+    <div class="home container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+          <div class="text-center">
+<h1 style="color: white; padding-top: 10px; font-family: DM Serif Display;" >Cinematic Teaser</h1>
+          </div>
+                <p style="font-family: cursive; font-size: 20px; text-align: justify; padding: auto; padding-bottom: 30px; line-height: 1.6em; color: burlywood;">
+                    "A cinematic teaser, where the essence of your story is condensed into an electrifying visual symphony. It's a tantalizing glimpse into the world of your narrative, leaving you craving for more. An opportunity to whet your appetite for the grand production that awaits. We're here to craft a mini masterpiece that sets the stage for the main act. Get ready to be captivated in seconds."                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="home container-fluid">
+        <div class="gallery-lightbox-home container">
+            <div class="gallery">
+
+                <div *ngFor="let data of images; let i = index" class="gallery-img">
+                <div class="video-container home">
+                    <a (click)="redirectToVideo(data.name)">
+                        <img [src]="getImageUrl(data.id)" />
+                        <div class="video-overlay"></div>
+                    </a>
+                </div>
+                    <br>
+                    <br>
+                </div>
+            </div>
+
+            
+          
+          </div>
+    </div>
+</div>

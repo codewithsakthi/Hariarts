@@ -1,0 +1,215 @@
+.video-container {
+  position: relative;
+  display: inline-block;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.video-container:hover .video-overlay {
+  opacity: 1;
+}
+
+.video-overlay:before {
+  content: '\25BA'; /* Play button symbol (►) */
+  font-size: 4rem;
+  color: white;
+}
+.video-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.video-container:hover .video-overlay {
+  opacity: 1;
+}
+
+.play-button {
+  font-size: 4rem;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.video-container:hover .play-button {
+  transform: scale(1.2); /* Scale the play button on hover */
+}
+.filter-button {
+  background-color: transparent;
+  border: none;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'DM Serif Display', serif;
+
+}
+:host {
+    display: block;
+    text-align: center;
+  }
+  
+  .gallery-lightbox-container {
+    position: relative;
+    display: inline-block;
+    padding: 25px;
+  }
+  
+  .gallery {
+    line-height: 0;
+    column-count: 4;
+    column-gap: 30px;
+  }
+  
+  .gallery-img img {
+    width: 100%;
+    height: auto;
+    cursor: zoom-in;
+    border-radius: .35rem;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .21);
+  }
+  
+  
+  
+  .container-fluid{
+    background-color: white;
+  }
+  .gallery-img {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s; /* Add a smooth transition for zoom effect */
+}
+
+.image-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(252, 0, 0, 0.7);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+}
+
+.gallery-img:hover .play-button {
+    display: block; /* Show on hover */
+}
+
+.play-button::before {
+    content: "\f04b"; /* Unicode for YouTube play icon (fa-youtube) */
+    font-family: FontAwesome; /* You can use a font icon library like FontAwesome */
+    font-size: 30px;
+    color: #ffffff; /* YouTube red color */
+}
+
+.gallery-img:hover .image-wrapper {
+    transform: scale(1.1); /* Zoom in by 10% on hover */
+    opacity: 40%;
+}
+@media (max-width: 768px) {
+  .gallery {
+      column-count: 1; /* Two columns for screens <= 768px */
+  }
+  
+}
+.p{
+  line-height: 1.6em;
+}
+
+.card.video-thumbnail-card {
+  position: relative;
+  display: inline-block;
+}
+
+.thumbnail-link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+
+.thumbnail-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.play-button-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 20px;
+  transition: background-color 0.3s;
+}
+
+.play-button-overlay i {
+  color: white;
+  font-size: 40px;
+}
+
+.thumbnail-link:hover .play-button-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: background-color 0.3s;
+}
+.home {
+  --s: 50px;
+  --c: #191b22;
+  --_s: calc(2*var(--s)) calc(2*var(--s));
+  --_g: 35.36% 35.36% at;
+  --_c: #0000 66%, #20222a 68% 70%, #0000 72%;
+  background: 
+    radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s) / var(--_s), 
+    radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s) / var(--_s), 
+    radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0 / var(--_s), 
+    radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0 / var(--_s), 
+    repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0 / var(--_s), 
+    radial-gradient(var(--_c)) 0 calc(var(--s)/2) / var(--s) var(--s) var(--c);
+  background-attachment: fixed;
+}

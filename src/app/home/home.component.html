@@ -1,0 +1,219 @@
+<head>
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.0/components/teams/team-1/assets/css/team-1.css" />
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<!-- or -->
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/primeflex@3.3.1/primeflex.min.css">
+
+</head>
+<app-header1></app-header1>
+<div class="home">
+
+<div class="video-player-wrapper">
+		<vg-player>
+			<vg-buffering></vg-buffering>
+
+			<video #video [vgMedia]="$any(media)" #media id="singleVideo" autoplay="true" preload="auto" crossorigin
+				loop muted>
+				<source src="../../assets/slide.mp4" type="video/mp4">
+			</video>
+		</vg-player>
+</div>
+<section>
+    <div class="w-full relative pb-10 px-4 lg:px-0 custom-class">
+
+        <div class="pt-16 lg:flex items-center relative z-10 container mx-auto custom-class">
+            <div class="w-full lg:w-1/2 h-full lg:pr-6 xl:pr-0 custom-class">
+                <img tabindex="0" role="img" aria-label="people smiling" class="mx-auto"  src="../../assets/a.png"  alt="people smiling"/>
+            </div>
+            <div role="contentinfo" class="w-full lg:w-1/2 h-full custom-class">
+                <p tabindex="0" class="uppercase text-xl lg:text-2xl mb-2 lg:mb-4" style="color: #E48F45;">Extends A Warm Welcome By</p>
+                <h1 tabindex="0" class="text-2xl lg:text-4xl font-black mb-4 lg:mb-8 custom-class" style="color: #F5CCA0;">Hari Arts Cinematic Studio</h1>
+                <p class="mt-0 mb-2 lg:mb-4 text-400 lg:text-500 line-height-3">Welcome to Hari Arts Cinematic Studio! 📷 K.B. HariHaran, Founder of Hari Arts Cinematic Studio</p>
+
+                <p class="mt-0 mb-2 lg:mb-4 text-400 lg:text-500 line-height-3">
+                    Hello! I'm Hari, a creative soul with a diverse educational background that reflects my love for both business and the arts. I hold a Bachelor's in Business Administration <strong class="text-400 line-height-3">(B.B.A.,)</strong> a Master's in Commerce <strong class="text-400 line-height-3">(M.COM.),</strong> and specialized in computer applications with a Post Graduate Diploma in Computer Applications <strong class="text-400 line-height-3">(PGDCA)</strong>. Additionally, my journey led me to explore the profound teachings of Mahatma Gandhi, earning a Diploma in Gandhian Thought <strong class="text-400 line-height-3">(DGT).</strong>
+                </p>
+
+                <p class="mt-0 mb-2 lg:mb-4 text-400 lg:text-500 line-height-3">During my college days, my heart gravitated towards the world of arts, especially wall painting. I embraced my artistic spirit and delved into freelance wall painting, turning my passion into a profession. Over the past 12+ years, I've honed my skills and founded "Hari Arts Cinematic Studio," a creative space where my love for art and photography converges.</p>
+                <p class="mt-0 mb-2 lg:mb-4 text-400 lg:text-500 line-height-3">🖌️ Wall Painting Maestro: Known for transforming spaces with vibrant and meaningful wall art, my work reflects a fusion of artistic expression and social consciousness.</p>
+                <p class="mt-0 mb-2 lg:mb-4 text-400 lg:text-500 line-height-3">📷 Photography Enthusiast: Beyond the canvas, my lens captures moments, emotions, and stories. Photography is not just a hobby; it's a language I use to communicate the beauty of the world.</p>
+                <p class="mt-0 mb-2 lg:mb-4 text-400 lg:text-500 line-height-3">🌟 Entrepreneurial Spirit: With a solid foundation in business, I bring a unique blend of creativity and managerial acumen to Hari Arts Cinematic Studio. Each project is not just a work of art; it's a business crafted with precision and passion.</p>
+
+                <p class="mt-0 mb-2 lg:mb-4 text-400 lg:text-500 line-height-3">
+                    <strong class="text-400 line-height-3">
+                        "Rooted in a passion for wall painting arts, Hari Arts emerged as a freelance venture, evolving into a name synonymous with creativity and innovation so he choosing this name for Photography".
+                    </strong>
+                    With over 20 years of dedication to the arts, Hari Arts has grown into a beacon of artistic excellence. Today, Hari extends this artistic vision through photography, capturing the timeless beauty of temples and diverse places. Each photograph is a narrative, freezing moments in time and revealing the soul of sacred spaces. Join Hari Arts on a visual journey at Hari Arts Cinematic Studio, where art and spirituality converge in captivating harmony.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Top menu */
+    .top-100 {
+        animation: slideDown 0.5s ease-in-out;
+    }
+    @keyframes slideDown {
+        0% {
+            top: -50%;
+        }
+        100% {
+            top: 0;
+        }
+    }
+    * {
+        outline: none !important;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-tap-highlight-color: transparent;
+    }
+</style>
+
+<section>
+		 <div class="keen-slider" #sliderRef>
+			<div *ngFor="let item of Banner" class="keen-slider__slide">
+			  <img [src]="getImageUrl(item.id)" style="width: 100%; display: block;" />
+			</div>
+		 </div>
+</section>
+<br>
+<section>
+		<div >	
+            <span class="block text-3xl font-bold mb-1 text-center" style="color:#E25E3E;font-family: cursive;">Grand Events</span>
+			<br>
+
+		</div>
+	
+		 <div class="keen-slider" #sliderRef1>
+			<div *ngFor="let item of Banner1" class="keen-slider__slide">
+			  <img [src]="getImageUrl(item.id)" style="width: 100%; display: block;" />
+			</div>
+		 </div>
+</section>
+
+<section>
+	<div >	
+            <span class="block text-3xl font-bold mb-1 text-center" style="color:#FFC26F;font-family: cursive;">Small Events</span>
+			<br>
+
+	</div>
+
+	 <div class="keen-slider" #sliderRef2>
+		<div *ngFor="let item of Banner2" class="keen-slider__slide">
+		  <img [src]="getImageUrl(item.id)" style="width: 100%; display: block;" />
+		</div>
+	 </div>
+</section>
+
+<section>
+	<div >	
+            <span class="block text-3xl font-bold mb-1 text-center" style="color:#D4D925;font-family: cursive;">Outdoor Shoots</span>
+			<br>
+
+	</div>
+
+	 <div class="keen-slider" #sliderRef3>
+		<div *ngFor="let item of Banner3" class="keen-slider__slide">
+		  <img [src]="getImageUrl(item.id)" style="width: 100%; display: block;" />
+		</div>
+ 	</div>
+</section>
+<div >	
+	<span class="block text-3xl font-bold mb-1 text-center" style="color:#FFD95A;font-family: cursive;">Recent Collection</span>
+	<br>
+</div>
+<style>
+	.custom-pagination {
+	  display: flex;
+	  list-style: none;
+	  padding: 0;
+	  margin: 20px 0;
+	}
+  
+	.custom-pagination-item {
+	  margin-right: 5px;
+	}
+  
+	.custom-pagination-item a {
+	  display: inline-block;
+	  padding: 8px 16px;
+	  text-decoration: none;
+	  color: #1890ff;
+	  border: 1px solid #1890ff;
+	  border-radius: 4px;
+	  cursor: pointer;
+	  transition: all 0.3s;
+	}
+  
+	.custom-pagination-item a:hover {
+	  background-color: #1890ff;
+	  color: white;
+	}
+  
+	.custom-pagination-item.active a {
+	  background-color: #1890ff;
+	  color: white;
+	}
+  </style>
+
+
+    <nz-water-mark nzContent="HariArts">
+		<div class="masonry-container">
+			<div class="masonry">
+			  <div class="mItem" *ngFor="let imageUrl of getCurrentPageImages()">
+				<img [src]="getImageUrl(imageUrl.id)">
+			  </div>
+			</div>
+			<ul class="custom-pagination text-center">
+			  <li class="custom-pagination-item" *ngIf="currentPage > 1">
+				<a href="javascript:void(0);" (click)="goToPage(currentPage - 1)">Previous</a>
+			  </li>
+			  <li class="custom-pagination-item" *ngFor="let page of getPageNumbers()" [ngClass]="{'active': page === currentPage}">
+				<a href="javascript:void(0);" (click)="goToPage(page)">{{ page }}</a>
+			  </li>
+			  <li class="custom-pagination-item" *ngIf="currentPage < getPageNumbers().length">
+				<a href="javascript:void(0);" (click)="goToPage(currentPage + 1)">Next</a>
+			  </li>
+			</ul>
+		</div>
+    </nz-water-mark>
+
+  
+  
+  
+  
+  
+  
+  
+<!--credit by Surjith S M -->
+
+
+<!-- <div class="faq-section px-4 py-8 md:px-6 lg:px-8">
+    <div class="text-700 text-center">
+       <span class="block text-6xl font-bold mb-1 text-center" style="color:#a4d3dd">Explore Our FAQ</span>
+                    <div class="text-700 text-2xl mb-5">
+            Welcome to our FAQ section! Here, you'll find answers to commonly asked questions about our products and services. We are committed to providing you with helpful information to enhance your experience with us. If you can't find what you're looking for, feel free to reach out to us via WhatsApp.
+        </div>
+        <button onclick="window.open('https://wa.me/+919994420163?text=Hello! I have a question about your services.', '_blank')"  pButton pRipple label="Chat Now" icon="fa-brands fa-whatsapp" class="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap"></button>
+    </div>
+</div> -->
+
+<app-testimonal></app-testimonal>
+
+<!-- <div class="container-fluid" >
+<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/03f12ea0709f5aa6a07d2ef2cb22bd1f.html"  scrolling="yes" allowtransparency="false" class="lightwidget-widget widget"></iframe>
+</div>
+ -->
+
+	<app-footer></app-footer>
+</div>

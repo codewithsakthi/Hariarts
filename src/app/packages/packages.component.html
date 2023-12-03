@@ -1,0 +1,303 @@
+<app-header></app-header>
+<div class="home">
+
+    <div class="container-fluid home">
+        <div class="gallery-lightbox-container">
+            <div class="gallery">
+              <div *ngFor="let data of data; let i = index" class="gallery-img">
+                    <img  [src]="data.imageSrc" >
+              </div>
+            </div>
+          
+          </div>
+    </div>
+    <!-- <button  class="btn-lightbox-carousel btn-prev" (click)="prevImage()" >
+        <i class="fa fa-arrow-circle-left icon-prev"></i>
+      </button>
+    <button *ngIf="controls && currentIndex < totalImageCount - 1" class="btn-lightbox-carousel btn-next" (click)="nextImage()">
+        <i class="fa fa-arrow-circle-right icon-next"></i>
+      </button> -->
+
+      
+      
+<br>
+<div class="container price justify-content-center home">
+    <div class="row justify-content-center home" >
+        <h1 class="text-center" >Grand Event</h1>
+        <div class="col-md-3 col-sm-6">
+            <div class="pricing-table-3 basic">
+                <div class="pricing-table-header">
+                    <h4><strong>SILVER</strong></h4>
+                    <p>Unlimited Photos</p>
+
+                </div>
+                <div class="price"><strong> Rs.35000</strong></div>
+                <div class="pricing-body">
+                    <ul class="pricing-table-ul">
+                        <li><i class="fa fa-cloud"></i><b>Traditional Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/TraditionalVideo" title="Click to view"><i class="fa fa-database"></i><b>Traditional Videos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+
+                        <li routerLink="/TraditionalHighlight" class="not-avail"><i class="fa fa-clock-o"></i><b>Highlight Videos⠀⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li class="not-avail"><i class="fa fa-clock-o"></i><b>12 x 36 Album Size<br>(50 sheet / 300 pics)</b></li>
+                        <li class="not-avail"><i class="fa fa-envelope"></i><b> 15 x 10 Photo Frame(1)</b></li>
+                    </ul><a routerLink="/BookNow" class="view-more">Book Now</a></div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="pricing-table-3 premium">
+                <div class="pricing-table-header">
+                    <h4><strong>GOLD</strong></h4>
+                    <p>Unlimited Photos</p>
+
+                </div>
+                <div class="price"><strong>Rs.50000</strong></div>
+                <div class="pricing-body">
+                    <ul class="pricing-table-ul">
+                        <li><i class="fa fa-cloud"></i><b>Traditional Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>Traditional Videos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/Moments" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Photos⠀⠀⠀⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/TraditionalHighlight"class="not-avail"><i class="fa fa-clock-o"></i><b>Highlight Videos⠀⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li class="not-avail"><i class="fa fa-clock-o"></i><b>12 x 36 Album Size<br>(50 sheet / 300 Pics)</b></li>
+                        <li class="not-avail"><i class="fa fa-envelope"></i><b> 15 x 10 Photo Frame(1)</b></li>
+                    </ul><a routerLink="/BookNow" class="view-more">Book Now</a></div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="pricing-table-3 business">
+                <div class="pricing-table-header">
+                    <h4><strong>DIAMOND</strong></h4>
+                    <p>Unlimited Photos</p>
+
+                </div>
+                <div class="price"><strong>Rs.80000</strong></div>
+
+                <div class="pricing-body">
+                    <ul class="pricing-table-ul">
+                        <li><i class="fa fa-cloud"></i><b>Traditional Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>Traditional Videos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/Moments" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Photos⠀⠀⠀⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/CinematicHighlights" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Videos⠀⠀⠀⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+
+                        <li routerLink="/CinematicHighlights" class="not-avail"><i class="fa fa-clock-o"></i><b>Cinematic Highlight⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/Reels" class="not-avail"><i class="fa fa-clock-o"></i><b>Reels Video⠀⠀⠀⠀⠀⠀⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+
+                        <li class="not-avail"><i class="fa fa-clock-o"></i><b>12 x 36 Album Size<br>(50 sheet / 300 pics)</b></li>
+                        <li class="not-avail"><i class="fa fa-envelope"></i><b> 12 x 18 Photo Frame(1) & Calendar</b></li>
+                    </ul><a routerLink="/BookNow" class="view-more">Book Now</a></div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="pricing-table-3 plat">
+                <div class="pricing-table-header">
+                    <h4><strong>PLATINUM </strong></h4>
+                    <p>Unlimited Photos</p>
+
+                </div>
+                <div class="price"><strong>Rs.95000</strong></div>
+
+                <div class="pricing-body">
+                    <ul class="pricing-table-ul">
+                        <li><i class="fa fa-cloud"></i><b>Traditional Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>Traditional Videos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/Moments" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/CinematicHighlights" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Videos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li class="not-avail"><i class="fa fa-clock-o"></i><b>Drone Shoot</b></li>
+                        <li routerLink="/CinematicHighlights" class="not-avail"><i class="fa fa-clock-o"></i><b> Cinematic Highlight⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/CinematicTeaser"class="not-avail"><i class="fa fa-clock-o"></i><b>Cinematic Teaser⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/Reels" class="not-avail"><i class="fa fa-clock-o"></i><b>Reels Video⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li class="not-avail"><i class="fa fa-clock-o"></i><b>12 x 36 Album Size<br>(50 sheet / 300 pics)</b></li>
+                        <li class="not-avail"><i class="fa fa-envelope"></i><b> 12 x 18 Photo Frame(2) & Calendar</b></li>
+                    </ul><a routerLink="/BookNow" class="view-more">Book Now</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container price justify-content-center home">
+    <div class="row justify-content-center home" >
+        <h1 class="text-center">Small Event</h1>
+        <div class="col-md-3 col-sm-6">
+            <div class="pricing-table-3 basic">
+                <div class="pricing-table-header">
+                    <h4><strong>SILVER</strong></h4>
+                    <p>Unlimited Photos</p>
+
+                </div>
+                <div class="price"><strong> Rs.20000</strong></div>
+                <div class="pricing-body">
+                    <ul class="pricing-table-ul">
+                        <li><i class="fa fa-cloud animated-text"></i><b>Traditional Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>Traditional Videos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/TraditionalHighlight" class="not-avail"><i class="fa fa-clock-o"></i><b>Highlight Videos⠀⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li class="not-avail"><i class="fa fa-clock-o"></i><b>28 x 10 Album Size<br>(32 sheet/150 Pics)</b></li>
+                        <li class="not-avail"><i class="fa fa-envelope"></i><b> 12 x 8 Photo Frame(1)</b></li>
+                    </ul><a routerLink="/BookNow" class="view-more">Book Now</a></div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="pricing-table-3 premium">
+                <div class="pricing-table-header">
+                    <h4><strong>GOLD</strong></h4>
+                    <p>Unlimited Photos</p>
+
+                </div>
+                <div class="price"><strong>Rs.30000</strong></div>
+                <div class="pricing-body">
+                    <ul class="pricing-table-ul">
+                        <li><i class="fa fa-cloud"></i><b>Traditional Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>Traditional Videos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/Moments" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/TraditionalHighlight" class="not-avail"><i class="fa fa-clock-o"></i><b>Highlight Videos⠀⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li class="not-avail"><i class="fa fa-clock-o"></i><b>28 x 10 Album Size<br>(32 sheet/150 Pics)</b></li>
+                        <li class="not-avail"><i class="fa fa-envelope"></i><b> 15 x 10 Photo Frame(1)</b></li>
+                    </ul><a routerLink="/BookNow" class="view-more">Book Now</a></div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="pricing-table-3 business">
+                <div class="pricing-table-header">
+                    <h4><strong>DIAMOND</strong></h4>
+                    <p>Unlimited Photos</p>
+
+                </div>
+                <div class="price"><strong>Rs.45000</strong></div>
+
+                <div class="pricing-body">
+                    <ul class="pricing-table-ul">
+                        <li><i class="fa fa-cloud"></i><b>Traditional Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>Traditional Videos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/Moments" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/CinematicHighlights" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Videos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+
+                        <li routerLink="/TraditionalHighlight" class="not-avail"><i class="fa fa-clock-o"></i><b>Highlight Videos⠀⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/Reels" class="not-avail"><i class="fa fa-clock-o"></i><b>Reels Video⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+
+                        <li class="not-avail"><i class="fa fa-clock-o"></i><b>28 x 10 Album Size<br>(32 sheet/150 Pics)</b></li>
+                        <li class="not-avail"><i class="fa fa-envelope"></i><b> 12 x 18 Photo Frame(1) & Calendar</b></li>
+                    </ul><a routerLink="/BookNow" class="view-more">Book Now</a></div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="pricing-table-3 plat">
+                <div class="pricing-table-header">
+                    <h4><strong>PLATINUM </strong></h4>
+                    <p>Unlimited Photos</p>
+
+                </div>
+                <div class="price"><strong>Rs.55000</strong></div>
+
+                <div class="pricing-body">
+                    <ul class="pricing-table-ul">
+                        <li><i class="fa fa-cloud"></i><b>Traditional Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>Traditional Videos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/Moments" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Photos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/CinematicHighlights" class="not-avail"><i class="fa fa-clock-o"></i><b>Candid Videos⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li class="not-avail"><i class="fa fa-clock-o"></i><b>Drone Shoot</b></li>
+                        <li routerLink="/TraditionalHighlight" class="not-avail"><i class="fa fa-clock-o"></i><b>Highlight Videos⠀⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/CinematicTeaser" class="not-avail"><i class="fa fa-clock-o"></i><b>Cinematic Teaser⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/Reels" class="not-avail"><i class="fa fa-clock-o"></i><b>Reels Video⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li class="not-avail"><i class="fa fa-clock-o"></i><b>28 x 10 Album Size<br>(32 sheet/150 Pics)</b></li>
+                        <li class="not-avail"><i class="fa fa-envelope"></i><b> 12 x 18 Photo Frame(2) & Calendar</b></li>
+                    </ul><a routerLink="/BookNow" class="view-more">Book Now</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<!-- <h1 class="text-center" >Our Moments </h1>
+
+<img src="../../assets/package/collage.jpg"> -->
+
+
+<div class="container price justify-content-center home">
+    <div class="row justify-content-center" >
+        <h1 class="text-center" >Out Door Event</h1>
+        <div class="col-md-3 col-sm-6">
+            <div class="pricing-table-3 basic">
+                <div class="pricing-table-header">
+                    <h4><strong>Outdoor <br>Shoot</strong></h4>
+                </div>
+                <div class="price"><strong> Rs.40000</strong></div>
+                <div class="pricing-body">
+                    <ul class="pricing-table-ul">
+                        <li routerLink="/PrePostWedding" ><i class="fa fa-cloud"></i><b>Pre / Post Wedding⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/InvitationVideo"><i class="fa fa-database"></i><b>  Invitation Video⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/SaveDate" class="not-avail"><i class="fa fa-clock-o"></i><b>Save the Date Video⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/StoryTelling" class="not-avail"><i class="fa fa-clock-o"></i><b> Story Telling Video⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li class="not-avail"><i class="fa fa-clock-o"></i><b> Album Size: 28 x 10 <br>(32 sheet/100 Pics)</b></li>
+                    </ul>
+                    <a routerLink="/BookNow" class="view-more">Book Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="pricing-table-3 premium">
+                <div class="pricing-table-header">
+                    <h4><strong>Outdoor Shoot</strong></h4>
+                </div>
+                <div class="price"><strong>Rs.30000</strong></div>
+                <div class="pricing-body">
+                    <ul class="pricing-table-ul">
+                        <li routerLink="/PrePostWedding" ><i class="fa fa-cloud"></i><b>Pre / Post Wedding ⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/InvitationVideo"><i class="fa fa-database"></i><b>  Invitation Video⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/SaveDate" class="not-avail"><i class="fa fa-clock-o"></i><b>Save the Date Video⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/StoryTelling" class="not-avail"><i class="fa fa-clock-o"></i><b> Story Telling Video⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li class="not-avail"><i class="fa fa-clock-o"></i><b> Album Size: 28 x 10 <br>(32 sheet/100 Pics)</b></li>
+                    </ul>
+                    <a routerLink="/BookNow" class="view-more">Book Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="pricing-table-3 business">
+                <div class="pricing-table-header">
+                    <h4><strong>Save The Date</strong></h4>
+                </div>
+                <div class="price"><strong>Rs.15000</strong></div>
+                <div class="pricing-body">
+                    <ul class="pricing-table-ul">
+                        <li routerLink="/PrePostWedding" ><i class="fa fa-cloud"></i><b>Pre / Post Wedding ⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/InvitationVideo"><i class="fa fa-database"></i><b>  Invitation Video⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li routerLink="/SaveDate" class="not-avail"><i class="fa fa-clock-o"></i><b>Save the Date Video⠀<i class="fa-solid fa-arrow-up-right-from-square blinking-text" style="color: #ff0000;"></i></b></li>
+                        <li class="not-avail"><i class="fa fa-envelope"></i><b> No album will be provided</b></li>
+                    </ul>
+                    <a routerLink="/BookNow" class="view-more">Book Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="pricing-table-3 plat">
+                <div class="pricing-table-header">
+                    <h4><strong>Wedding  Events</strong></h4>
+                </div>
+                <div class="price"><strong><span>  <br></span></strong></div>
+                <div class="pricing-body">
+                    <ul class="pricing-table-ul">
+                        <li><i class="fa fa-cloud"></i><b>Live Telecast Video</b></li>
+                        <li routerLink="/TraditionalVideo"><i class="fa fa-database"></i><b>360 Video</b></li>
+                        <li routerLink="/Moments" class="not-avail"><i class="fa fa-clock-o"></i><b>Instant Photo booth</b></li>
+                        <li routerLink="/CinematicHighlights" class="not-avail"><i class="fa fa-clock-o"></i><b>Wall Led</b></li>
+
+                    </ul>
+                    <a routerLink="/BookNow" class="view-more">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid home">
+    <div class="gallery-lightbox-container">
+        <div class="gallery">
+          <div *ngFor="let data of data; let i = index" class="gallery-img">
+                <img  [src]="data.imageSrc" >
+          </div>
+        </div>
+      
+      </div>
+</div>
+</div>

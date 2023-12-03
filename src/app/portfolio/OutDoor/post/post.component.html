@@ -1,0 +1,87 @@
+<!-- app.component.html -->
+<app-header></app-header>
+<router-outlet></router-outlet>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+<style>
+  .loading-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+
+  .spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+</style>
+<div class="filter-buttons home" >
+  <button style="color: #FFA700;"class="filter-button"  [routerLinkActive]="'active-link'"  routerLink="/Portfolio/OutDoor/PreWedding" >Pre Wedding</button>
+  <button style="color: #FFA700;" class="filter-button" [routerLinkActive]="'active-link'"  routerLink="/Portfolio/OutDoor/PostWedding" >Post Wedding</button>
+  <button style="color: #FFA700;"class="filter-button"  [routerLinkActive]="'active-link'"  routerLink="/Portfolio/OutDoor/Model" >Model Shoot</button>
+  <button style="color: #FFA700;"class="filter-button"  [routerLinkActive]="'active-link'"  routerLink="/Portfolio/OutDoor/Baby" >Baby Shoot</button>
+  <button style="color: #FFA700;"class="filter-button"  [routerLinkActive]="'active-link'"  routerLink="/Portfolio/OutDoor/Kids" >Kids Shoot</button>
+
+  
+</div>
+
+<div class="container-fluid home"  *ngIf="showParentComponent">
+  <!-- Your content goes here -->
+<div *ngIf="hide" class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 " >
+          <div class="text-center">
+<h1 style="color: white; padding-top: 50px; font-family: DM Serif Display;" >Post Wedding Shoot</h1>
+          </div>
+          <p class="paragraph"style="color: white; padding-top: 6px;">
+            As you flip the page into the next chapter, you get to experience a story of your love's continuation. This bond that will forever grow, including the happy and emotional journey, deserves to be highly valued when looked back at. Every moment should be forever sustained, pure and bright.
+          
+          </p>
+        </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div *ngIf="!selectedFolder">
+      <!-- Folder view -->
+      <div class="row">
+        <div *ngFor="let folder of folders" class="col-md-4">
+          <ng-container *ngIf="!imageLoaded">
+            <!-- Loading animation with spinner -->
+            <div class="loading-animation">
+              <div ></div>
+                  <img  src="../../../../assets/preloader.svg" alt="Loading Spinner">
+              </div>
+          </ng-container>
+          <a (click)="navigateToAnotherComponent(folder.id)"
+          >
+            <div class="card folder-card bezel-less-card home" >
+              <img [src]="getThumbnailUrl(folder)" class="card-img-top folder-thumbnail" (load)="imageLoaded = true" (error)="imageLoaded = false">
+              <div *ngIf="imageLoaded" class="card-body text-center">
+                <h5 style="color: #FFA700; text-align: center;  " class=" text-center paragraph">{{ folder.name }}</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+
+</div>
+
+</div>
+
+
+  
+
+

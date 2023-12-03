@@ -1,0 +1,228 @@
+
+img, video {
+     max-width: 100%;
+     height: 330px; 
+}
+/* Default styles for submenus */
+.dropdown-menu li {
+    position: relative;
+   
+  }
+  /* .dropdown-item:hover{
+    
+background-color: #e71818;   
+  } */
+  .heading:hover{
+    background-color: #ffffff;   
+      }
+  .dropdown-menu{
+    background-color: #000000;   
+      }
+      
+  .dropdown-menu .dropdown-submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: -7px;
+  }
+  
+  .dropdown-menu .dropdown-submenu-left {
+    right: 100%;
+    left: auto;
+  }
+  
+  /* Add a hover effect for submenus on larger screens */
+  
+  
+  /* Media query for smaller screens (e.g., mobile devices) */
+  @media (max-width: 768px) {
+    /* Styles for submenus on smaller screens */
+    .dropdown-menu .dropdown-submenu {
+        display: block; /* Show submenus by default */
+        position: static; /* Remove absolute positioning */
+        top: auto;
+        left: auto;
+    }
+  
+    /* Add hover effect for submenus on smaller screens */
+    .dropdown-menu > li:hover > .dropdown-submenu {
+        display: block; /* Show submenus on hover */
+    }
+  }
+  .green-icon {
+    color: green;
+}
+  .multi-column-dropdown {
+    width: 1000px; /* Adjust the width as needed for larger screens */
+    padding: 20px;
+    background-color: #000000;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 260px; /* Adjust the vertical position as needed */
+    left: 40%;
+    transform: translateX(-50%);
+    height: 480px;
+  }
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute;
+    top: 52px;
+    height: auto;
+  }
+  
+  .video-container {
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+    height: 100%; /* Set the height to 100% */
+    border-color: #ffffff;
+    
+  }
+  
+  /* Make sure the parent container is also set to 100% height */
+  .col-md-3 {
+    height: 100%;
+    width: fit-content;
+  }
+  
+  .nav-link.active {
+    color: #ffffff; /* Text color for the top-level link */
+    font-weight: bold; /* Make it bold */
+  }
+  
+  /* Mobile Responsive Styles */
+  @media (max-width: 767px) {
+    .multi-column-dropdown {
+      width: 100%; /* Full width for smaller screens */
+      max-width: 100%;
+      top: 50%; /* Center vertically */
+      left: 0;
+      transform: translateY(-50%);
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
+    .multi-column-dropdown .col-md-3 {
+      width: 100%; /* Full width for columns on smaller screens */
+      margin-bottom: 10px; /* Reduce margin between columns */
+    }
+    /* Add more responsive adjustments as needed */
+  }
+  
+  
+  /* Style each column */
+  .multi-column-dropdown .col-md-3 {
+    margin-bottom: 20px;
+  }
+  
+  /* Style headings in each column */
+  .multi-column-dropdown h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Style the submenus and links */
+  .multi-column-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .multi-column-dropdown li {
+    margin-bottom: 5px;
+  }
+  
+  .multi-column-dropdown a {
+    text-decoration: none;
+    color: #000000;
+  }
+  .dropdown-item h{
+    color:white ;
+  }
+  
+  .multi-column-dropdown a:hover {
+    color: #ffffff;
+    background-color: red;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 70px 0 0;
+  }
+  .header,
+  .main {
+    padding: 5px 15px;
+    width: 100%;
+  }
+  .header {
+    background: transparent;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+  }
+  .main {
+    background: rgb(0, 0, 0);
+    margin: 15px auto;
+    min-height: 150vh;
+  }
+  /* Add this CSS to your stylesheet */
+.transparent-navbar {
+  background-color: transparent !important; /* Override the default background color */
+  box-shadow: none !important; /* Remove any box shadow */
+}
+.transparent-navbar a {
+  color: white 
+}
+@media (max-width: 768px) {
+  .navbar {
+      background-color: #000000d8 !important; /* Change to the desired background color for mobile mode */
+      top: 0;
+      transition: none;
+  }
+  
+  .navbar-brand{
+    padding-left: 0;
+    height:"90px"
+  }
+}
+.blinking-text{
+  animation: blink 1s infinite; /* 1s duration, infinite loop */
+
+}
+
+
+.dropdown-item:hover{
+  background-color: red;
+}
+.logo img {
+  height: 90px;
+  padding-left: 80px;
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    padding-left: 0px; /* Adjust this value as needed */
+    height: 54px;
+  }
+  .bugportfolio {
+    position: absolute;
+    /* top: 0; */
+    height: 500px;
+    overflow-y: auto;
+    margin-top: -7px;
+    left:0;
+    background-color: black;
+}
+}
+.portfolio {
+    --bs-gutter-x: 0.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1;
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}

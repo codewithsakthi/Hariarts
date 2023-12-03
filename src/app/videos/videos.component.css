@@ -1,0 +1,36 @@
+@media (max-width: 768px) {
+
+    .video-player-wrapper {
+      max-width: 100%; /* Set the maximum width of the video player wrapper to 100% of its parent container */
+      position: relative; /* Ensure that the aspect ratio is maintained */
+      padding-bottom: 2%; /* 16:9 aspect ratio for responsive scaling */
+      padding-top: 24%;
+    }
+  }
+  .video-player-wrapper {
+    max-width: 100%; /* Set the maximum width of the video player wrapper to 100% of its parent container */
+    position: relative; /* Ensure that the aspect ratio is maintained */
+    padding-bottom: 2%; /* 16:9 aspect ratio for responsive scaling */
+  }
+  
+  video {
+    max-width: 100%; /* Ensure the video element scales with its parent */
+    height: auto; /* Allow the video's height to adjust based on its width */
+    display: block; /* Remove any default inline display */
+  }
+  .home {
+    --s: 50px;
+    --c: #191b22;
+    --_s: calc(2*var(--s)) calc(2*var(--s));
+    --_g: 35.36% 35.36% at;
+    --_c: #0000 66%, #20222a 68% 70%, #0000 72%;
+    background: 
+      radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s) / var(--_s), 
+      radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s) / var(--_s), 
+      radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0 / var(--_s), 
+      radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0 / var(--_s), 
+      repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0 / var(--_s), 
+      radial-gradient(var(--_c)) 0 calc(var(--s)/2) / var(--s) var(--s) var(--c);
+    background-attachment: fixed;
+  }
+  

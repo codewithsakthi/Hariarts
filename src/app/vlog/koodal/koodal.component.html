@@ -1,0 +1,107 @@
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/primeng/16.6.0/resources/components/galleria/galleria.min.css"
+  integrity="sha512-nRFeh3+o3dvbDPgVan2vf0SMu7Fm/uGTNce6YFj1ofJE6v8GCJaKL5qhaYrolUjIr8s7g6buW6hYTep2OPX6Vw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/primeng/16.6.0/resources/components/carousel/carousel.min.css"
+  integrity="sha512-OldQUaoJioKuTUW9Vm0gaXr8ytkBs+/4398mmFEMEQljZN9EENOYywCI0Oox3s6WwIIZJiYG6y/2ehnL+B+xVg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+<div class="home" >
+<app-header></app-header>
+
+<div class="keen-slider" #sliderRef>
+    <div *ngFor="let item of data" class="keen-slider__slide">
+      <img [src]="getImageUrl(item.id)" style="width: 100%; display: block;" />
+    </div>
+</div>
+<br>
+<div class="container "  >
+  <mat-accordion class="responsive-accordion">
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header
+        class="custom-header"
+        [collapsedHeight]="'auto'"
+        [expandedHeight]="'auto'"
+      >
+        <mat-panel-title style="justify-content: center">
+          <h1 class="text-center custom-heading">
+            கூடழகர் பெருமாள் கோவில் 
+          </h1>
+          
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+  
+      <p style="font-family: cursive; font-size: 16px; text-align: justify">
+        <!-- Your content goes here -->
+      </p>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+
+
+
+      
+<div class="p-fluid p-grid p-formgrid container home">
+          <div class="p-field p-col-12 p-md-4">
+            <p-calendar
+              view="year"
+              dateFormat="yy"
+              [readonlyInput]="false"
+              inputId="pickYear"
+              [(ngModel)]="date"
+              placeholder="Pick any year"
+              (ngModelChange)="focus()"
+              (ngModelChange)="yearselector($event)"
+            >
+            </p-calendar>
+          </div>
+</div>
+
+<p *ngIf="!validyear"><nz-empty
+        nzNotFoundImage="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
+></nz-empty></p>
+
+<div *ngIf="!yearchanged" class="container" style="border-radius: 15px;" >
+          <mat-table [dataSource]="festival" matSort>
+
+            <!-- Festival Name Column -->
+            <ng-container matColumnDef="festivalName">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Festival Name</mat-header-cell>
+              <mat-cell *matCellDef="let festival">{{ festival.festivalName }}</mat-cell>
+            </ng-container>
+          
+            <!-- Approximate Month Column -->
+            <ng-container matColumnDef="month">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Approximate Month</mat-header-cell>
+              <mat-cell *matCellDef="let festival">{{ getMonthName(festival.month) }}</mat-cell>
+            </ng-container>
+          
+            <!-- Other columns can be added similarly -->
+          
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="navigateToAnotherComponent(row.folderId)" style="cursor: pointer;" ></mat-row>
+          
+          </mat-table>
+          
+          
+</div>
+<br>
+<div class="keen-slider" #sliderRef1>
+  <div *ngFor="let item of Banner" class="keen-slider__slide">
+    <img [src]="getImageUrl(item.id)" style="width: 100%; display: block;" />
+  </div>
+</div>
+</div>
+
+

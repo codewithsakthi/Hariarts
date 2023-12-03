@@ -1,0 +1,427 @@
+
+  /* Gallery Container */
+  .gallery {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Filter Buttons */
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .filter-buttons button {
+    margin: 5px;
+    padding: 6px 12px; /* Adjust padding to make the buttons shorter */
+    background-color: #333; /* Change the button color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .active-button {
+    background-color: #af0909; /* Change this to your desired active button color */
+    color: #ffffff; /* Change this to your desired text color for active button */
+  }
+  
+  .filter-buttons button.active {
+    background-color: #333; /* Change the active button color */
+  }
+  
+  /* Hover Effect */
+  .filter-buttons button:hover {
+    background-color: #af0909; /* Change the hover color */
+  }
+  
+  /* Active Button Hover Effect */
+  .filter-buttons button.active:hover {
+    background-color: #222; /* Change the active button hover color */
+  }
+  
+  
+  /* Image Container */
+  .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Individual Images */
+  .image {
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image img {
+    max-width: 100%;
+    height: 340px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+  
+  .image img:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Stylish Overlay */
+  .image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .image:hover::before {
+    opacity: 1;
+  }
+  
+  /* Caption on Hover */
+  .image::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .image:hover::after {
+    opacity: 1;
+  }
+  @media (max-width: 768px) {
+    .mat-panel-title{
+        font-size: 14px; /* Decrease font size for smaller screens */
+    }
+}
+/* Default styles for the title */
+.mat-panel-title {
+    display: flex;
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 30px;
+}
+
+/* Responsive styles for mobile screens */
+.responsive-text {
+    font-size: 14px; /* Decrease font size for smaller screens */
+}
+@media (max-width: 768px) {
+    .h1{
+        font-size: 14px; /* Decrease font size for smaller screens */
+    }
+    .text-center h1{
+        font-size: 12px;
+    }
+}
+
+/* Styles for large screens (e.g., desktop) */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  /* Styles for small screens (e.g., mobile) */
+  @media screen and (max-width: 768px) {
+    .filter-buttons {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  
+    .filter-buttons button {
+      margin-bottom: 5px;
+    }
+  }
+  
+
+
+  :host {
+    display: block;
+    text-align: center;
+  }
+  
+  .gallery-lightbox-container {
+    position: relative;
+    display: inline-block;
+    padding: 25px;
+  }
+  
+  .gallery1{
+    line-height: 0;
+    column-count: 3;
+    column-gap: 30px;
+  }
+  
+  .gallery-img img {
+    width: 100%;
+    height: auto;
+    cursor: zoom-in;
+    border-radius: .35rem;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .21);
+  }
+  
+  .lightbox {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .85);
+  }
+  
+  .count {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 7%;
+    height: 10%;
+    color: rgb(0, 0, 0);
+    opacity: 0.7;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    background: 0 0;
+    border: 0;
+    cursor: pointer;
+    width: 7%;
+    height: 10%;
+    z-index: 2;
+  }
+  
+  .fa-times {
+    font-size: 25px;
+  }
+  
+  .btn-lightbox-carousel {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    width: 8%;
+    height: 8%;
+    padding: 0;
+    color: aliceblue;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    cursor: pointer;
+  }
+  
+  .btn-prev {
+    left: 0;
+  }
+  
+  .btn-next {
+    right: 0;
+  }
+  
+  .icon-lightbox-carousel {
+    color: aliceblue;
+    opacity: 0.5;
+    transition: all 0.15s ease;
+  }
+  
+  .icon-lightbox-carousel:hover {
+    opacity: 0.9 !important;
+  }
+  
+  .icon-lightbox-carousel:active {
+    opacity: 0.5 !important;
+  }
+  
+  
+  .icon-prev,
+  .icon-next {
+    font-size: 30px;
+    color: #000;
+  }
+  .lightbox-img img{
+    width: 100%;
+    height: 950px;
+    border-radius: .35rem;
+  }
+
+  .image-container {
+    position: relative;
+    max-width: 640px; /* Adjust the max width as needed */
+    margin: 0 auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #000;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+  }
+  
+  .overlay a i.fab.fa-youtube {
+    font-size: 64px;
+    color: red;
+    transition: all 0.3s ease;
+  }
+  
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .image-container:hover img {
+    transform: scale(1.03); /* Slightly zoom in on hover */
+    filter: brightness(90%); /* Slightly dim the image on hover */
+  }
+  
+  /* Add this to your CSS file */
+.active-button {
+  background-color: #ff5733; /* Change to your desired active color */
+  color: #fff; /* Change to your desired text color for active button */
+}
+@media (max-width: 768px) {
+  .lightbox {
+    justify-content: flex-start;
+  }
+  .lightbox-img img {
+    height: auto;
+    max-width: 100%;
+    max-height: 80%;
+  }
+  .count,
+  .close-btn,
+  .btn-lightbox-carousel {
+    width: 12%;
+    height: 15%;
+    color: white;
+  }
+
+}
+@media (max-width: 768px) {
+  .btn-lightbox-carousel {
+    width: 15%;
+    height: 15%;
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .active-button {
+    background-color: #ff5733; /* Change to your desired active color */
+    color: #fff; /* Change to your desired text color for active button */
+  }
+}
+.lightbox-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the lightbox height to the viewport height for centering */
+  background-color: rgba(0, 0, 0, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.lightbox-img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Fit and center the image within the container */
+  display: block;
+  margin: 0 auto;
+}
+.count {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 7%;
+  height: 10%;
+  color: rgb(255, 255, 255);
+  opacity: 0.7;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  z-index: 100;
+
+}
+.path {
+  font-family: 'Courier New', monospace; /* Use a monospace font for path appearance */
+  font-size: 24px; /* Adjust the font size as needed */
+  color: #333; /* Set text color */
+  border: 1px solid #ccc; /* Add a border for the path effect */
+  padding: 5px; /* Add some padding for spacing */
+  background-color: #f5f5f5; /* Add a background color if needed */
+}
+.no-underline {
+  text-decoration: none; /* Remove the underline */
+}
+
+.no-underline:hover {
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.back {
+  --s: 50px;
+  --c: #191b22;
+  --_s: calc(2*var(--s)) calc(2*var(--s));
+  --_g: 35.36% 35.36% at;
+  --_c: #0000 66%, #20222a 68% 70%, #0000 72%;
+  background: 
+    radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s) / var(--_s), 
+    radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s) / var(--_s), 
+    radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0 / var(--_s), 
+    radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0 / var(--_s), 
+    repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0 / var(--_s), 
+    radial-gradient(var(--_c)) 0 calc(var(--s)/2) / var(--s) var(--s) var(--c);
+  background-attachment: fixed;
+}

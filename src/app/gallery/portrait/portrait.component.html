@@ -1,0 +1,30 @@
+  <app-header></app-header>
+  <div>
+    <p *ngIf="gallery" class="text-center path">
+      <a (click)="back()" class="text-blue no-underline" >Gallery</a> / {{folderName}}
+    </p>
+    <div class="gallery1" *ngIf="gallery" >
+    <div *ngFor="let data of sortImagesByFilename(images); let i = index" class="gallery-img">
+      <img  [src]="getImageUrl(data.id)" (click)="onPreviewImage(i)"
+      >
+    </div>
+  </div>
+  </div>
+    <nz-water-mark nzContent="HariArts">
+      <div *ngIf="showMask" class="lightbox" animation2 #swipeElement (touchstart)="onTouchStart($event)"
+      (touchend)="onTouchEnd($event)" (window:keydown)="onKeyDown($event)" >
+      <span *ngIf="showCount" class="count">{{ currentIndex + 1 }} / {{ images.length }}</span>
+      <button
+          *ngIf="previewImage"
+          class="close-btn"
+          (click)="onClosePreview()"
+        >
+          <i class="fas fa-times" style="color: #ffffff"></i>
+      </button>
+      <div *ngIf="previewImage" class="lightbox-img"
+        [@animation]="{value:'visible'}"
+        (@animation.done)="onAnimatedEnd($event)">
+        <img [src]="getImageUrl(currentLightboxImage.id) ">
+      </div> 
+      </div>
+    </nz-water-mark>
