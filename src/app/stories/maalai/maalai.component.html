@@ -1,0 +1,39 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <br>
+                <br>
+                <img src="../../../assets/s/04. Malai Matrudhal.png" class="img-fluid" alt="Wedding Reception">
+                <p  style="font-family: cursive; font-size: 20px; text-align: justify;">
+                    Maalai Maatrudal is a traditional wedding ritual commonly practiced in South India, particularly in Tamil Nadu. It is a formal acknowledgement and exchange of garlands between the bride and groom, symbolising their acceptance and union in the presence of their families and loved ones. The garlands, made from fresh flowers like jasmine and rose, are adorned with gold or silver threads, and are considered auspicious in Hindu weddings. The Maalai Maatrudal ceremony serves as a powerful visual spectacle that adds to the festive air of the wedding, and is often captured in photographs and films by wedding photographers and videographers.                </p>
+                <p  style="font-family: cursive; font-size: 20px; text-align: justify">
+                    In Tamil, ‘Maalai’ means garland, and ‘Maatrudal’ means exchanging. The Maalai Maatrudal ceremony is a significant rite of passage in Hindu weddings, marking the beginning of the couple’s journey as husband and wife. The ritual typically takes place after the Kanyadanam, where the bride’s father gives her away to the groom. The exchange of garlands is usually accompanied by devotional songs and prayers led by the priests or elders in the family. The garlands themselves are intricately crafted and often bear the names of the bride and groom, symbolising their inseparable bond.  The Maalai Maatrudal ceremony is an important marker of the couple’s commitment to each other, and is a cherished moment for wedding guests and family members alike.                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="gallery-lightbox-container">
+            <div class="gallery">
+              <div *ngFor="let data of sortImagesByFilename(images); let i = index" class="gallery-img">
+                <img  [src]="getImageUrl(data.id)" (click)="onPreviewImage(i)">
+              </div>
+            </div>
+            <div *ngIf="showMask" class="lightbox" animation2 #swipeElement (touchstart)="onTouchStart($event)"
+            (touchend)="onTouchEnd($event)" (window:keydown)="onKeyDown($event)" >
+            <span *ngIf="showCount" class="count">{{ currentIndex + 1 }} / {{ images.length }}</span>
+            <button *ngIf="previewImage" class="close-btn">
+              <i class="fa-thin fa-rotate fa-spin" style="color: #ffffff;"></i>
+            </button>
+            
+            <div *ngIf="previewImage" class="lightbox-img"
+              [@animation]="{value:'visible'}"
+              (@animation.done)="onAnimatedEnd($event)">
+              <img [src]="getImageUrl(currentLightboxImage.id) " (click)="closeLightbox()">
+            </div> 
+            </div>
+          </div>
+    </div>
+</div>
+

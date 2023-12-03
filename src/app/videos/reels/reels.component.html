@@ -1,0 +1,48 @@
+<app-header></app-header>
+<div class="filter-buttons home" >
+  <button style="color: #43A047;" class="filter-button" routerLink="/TraditionalVideo" >Traditional Video</button>
+  <button style="color: #43A047;"class="filter-button"  routerLink="/TraditionalHighlight" >Traditional Highlight </button>
+  <button style="color: #43A047;"class="filter-button"  routerLink="/CinematicTeaser" > Cinematic Teaser</button>
+  <button style="color: #43A047;"class="filter-button"  routerLink="/CinematicHighlights" >Cinematic Highlights</button>
+    <button style="color: #43A047;" class="filter-button" routerLink="/Reels" >Reels</button>
+  <button style="color: #43A047;"class="filter-button"  routerLink="/InvitationVideo" >Invitation Video </button>
+  <button style="color: #43A047;"class="filter-button"  routerLink="/SaveDate" >Save Date Video</button>
+  <button style="color: #43A047;"class="filter-button"  routerLink="/PrePostWedding" >Pre / Post Video</button>
+  <button style="color: #43A047;"class="filter-button"  routerLink="/StoryTelling" >Story Telling</button>
+
+</div>
+<div class="home container-fluid home">
+    <div class="home container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+          <div class="text-center">
+<h1 style="color: white; padding-top: 10px; font-family: DM Serif Display;" >Reels</h1>
+          </div>
+                <p style="font-family: cursive; font-size: 20px; text-align: justify; padding: auto; padding-bottom: 30px; line-height: 1.6em; color: burlywood;">
+                    A short video reel is a concise and engaging montage of some of the most captivating moments in various scenarios. It could include stunning visuals, behind-the-scenes glimpses, unique perspectives, and more. What sets a short video reel apart from other types of videos is its brevity. A well-crafted short video reel is typically between 30 to 60 seconds long, making it easy for viewers to consume. Instagram's video sharing features, such as stories and reels, make it easier to share these videos with a wider audience, thereby amplifying the reach of the production house. A skillfully produced short video reel can not only showcase the creativity and technical expertise of the production house but also entice potential clients to book their services. In conclusion, short video reels are a powerful marketing tool that makes it easier for production houses to showcase their work, and Instagram is the perfect platform to share these videos with a wider audience.                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="home container-fluid">
+        <div class="gallery-lightbox-home container">
+            <div class="gallery">
+
+                <div *ngFor="let data of images; let i = index" class="gallery-img">
+                <div class="video-container home">
+                    <a (click)="redirectToVideo(data.name)">
+                        <img [src]="getImageUrl(data.id)" />
+                        <div class="video-overlay"></div>
+                    </a>
+                </div>
+                    <br>
+                    <br>
+                </div>
+            </div>
+
+            
+          
+          </div>
+    </div>
+</div>

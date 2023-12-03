@@ -1,0 +1,37 @@
+<app-header></app-header>
+
+<div class="gallery-lightbox-container">
+<div class="gallery">
+  <div class="row" *ngFor="let rowIndex of [0, 1, 2]">
+    <div class="gallery-img" *ngFor="let colIndex of [0, 1, 2]">
+      <ng-container *ngIf="data[rowIndex * 3 + colIndex]">
+        <img (click)="onPreviewImage(rowIndex * 3 + colIndex)" [src]="data[rowIndex * 3 + colIndex].imageSrc" [alt]="data[rowIndex * 3 + colIndex].imageAlt">
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+
+  <div *ngIf="showMask" class="lightbox" animation2>
+    <span *ngIf="showCount" class="count">{{ currentIndex + 1 }} / {{ totalImageCount }}</span>
+    <button *ngIf="previewImage" class="close-btn" (click)="onClosePreview()" >
+      <i class="fas fa-times"></i>
+    </button>
+    
+    <button *ngIf="controls && currentIndex > 0" class="btn-lightbox-carousel btn-prev" (click)="prevImage()" >
+      <i class="fa fa-arrow-circle-left icon-prev"></i>
+    </button>
+    
+    <button *ngIf="controls && currentIndex < totalImageCount - 1" class="btn-lightbox-carousel btn-next" (click)="nextImage()">
+      <i class="fa fa-arrow-circle-right icon-next"></i>
+    </button>
+
+    <div *ngIf="previewImage" class="lightbox-img"
+    [@animation]="{value:'visible'}"
+    (@animation.done)="onAnimatedEnd($event)"
+    >
+      
+      <img [src]="currentLightboxImage.imageSrc" [alt]="currentLightboxImage.imageAlt">
+    </div>
+  </div>
+</div>

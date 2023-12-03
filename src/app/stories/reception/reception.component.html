@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <br>
+                <br>
+                <img src="../../../assets/s/01. Reception.png" class="img-fluid" alt="Wedding Reception">
+                <p  style="font-family: cursive; font-size: 20px; text-align: justify; ">
+                    Wedding receptions are an essential part of any wedding celebration. The wedding reception is an occasion where the newly wedded couple, their family, and friends come together to celebrate the couple's union and have fun. It is an event that marks the completion of the wedding day festivities. A wedding reception is usually hosted by the newlyweds' family and is attended by all the guests who were present at the wedding ceremony. It is an opportunity for guests to congratulate the newlyweds and wish them a happy and prosperous married life.
+                </p>
+                <p style="font-family: cursive; font-size: 20px; text-align: justify">
+                    Wedding receptions are often lavish and grand affairs. The decoration, lighting, food, and entertainment are all carefully planned to make the event a memorable one for the couple and their guests. Some popular traditions at wedding receptions include the first dance of the newlyweds, speeches by the parents, best man and maid of honor, and the cutting of the wedding cake. Wedding receptions are also a time for guests to mingle, dance, and have a good time. It is a time for long lost friends to catch up, relatives to meet, and socialize with each other. A wedding reception is a significant event that is cherished by the newlyweds and their loved ones for years to come.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="gallery-lightbox-container">
+            <div class="gallery">
+              <div *ngFor="let data of sortImagesByFilename(images); let i = index" class="gallery-img">
+                <img  [src]="getImageUrl(data.id)" (click)="onPreviewImage(i)">
+              </div>
+            </div>
+            <div *ngIf="showMask" class="lightbox" animation2 #swipeElement (touchstart)="onTouchStart($event)"
+            (touchend)="onTouchEnd($event)" (window:keydown)="onKeyDown($event)" >
+            <span *ngIf="showCount" class="count">{{ currentIndex + 1 }} / {{ images.length }}</span>
+            <button *ngIf="previewImage" class="close-btn">
+              <i class="fa-thin fa-rotate fa-spin" style="color: #ffffff;"></i>
+            </button>
+            
+            <div *ngIf="previewImage" class="lightbox-img"
+              [@animation]="{value:'visible'}"
+              (@animation.done)="onAnimatedEnd($event)">
+              <img [src]="getImageUrl(currentLightboxImage.id) " (click)="closeLightbox()">
+            </div> 
+            </div>
+          </div>
+    </div>
+</div>
+

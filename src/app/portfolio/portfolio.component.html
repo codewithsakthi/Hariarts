@@ -1,0 +1,38 @@
+<app-header></app-header>
+    <div *ngIf="selectedFolder"  (window:keydown)="onKeyDown($event)">
+  
+    </div>
+
+ 
+
+      <div class="gallery1 home" >
+
+          <div *ngFor="let data of sortImagesByFilename(selectedFolder.images); let i = index" class="gallery-img">
+            <ng-container *ngIf="!imageLoaded">
+              <div class="loading-animation">
+                <div ></div>
+                    <img  src="../../../../assets/preloader.svg" alt="Loading Spinner" style="height: 50px;">
+              </div>
+            </ng-container>
+            <img (click)="onPreviewImage(i)"  [src]="getImageUrl(data.id)" (load)="imageLoaded = true"  (error)="imageLoaded = false">
+          
+        </div>
+
+      </div>
+        
+        <div *ngIf="showMask" class="lightbox" animation2 #swipeElement (touchstart)="onTouchStart($event)"
+        (touchend)="onTouchEnd($event)">>
+          <span *ngIf="showCount" class="count">{{ currentIndex + 1 }} / {{ selectedFolder.images.length }}</span>
+          <button *ngIf="previewImage" class="close-btn" (click)="onClosePreview()">
+            <i class="fas fa-times" style="color: #ffffff;"></i>
+          </button>
+       
+      
+          <div *ngIf="previewImage" class="lightbox-img"
+            [@animation]="{value:'visible'}"
+            (@animation.done)="onAnimatedEnd($event)">
+            <img [src]="getImageUrl(currentLightboxImage.id)">
+          </div>
+        </div>
+        
+<app-footer></app-footer>

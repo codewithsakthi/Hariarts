@@ -1,0 +1,96 @@
+<app-header></app-header>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/primeng/16.6.0/resources/components/galleria/galleria.min.css" integrity="sha512-nRFeh3+o3dvbDPgVan2vf0SMu7Fm/uGTNce6YFj1ofJE6v8GCJaKL5qhaYrolUjIr8s7g6buW6hYTep2OPX6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/primeng/16.6.0/resources/components/carousel/carousel.min.css" integrity="sha512-OldQUaoJioKuTUW9Vm0gaXr8ytkBs+/4398mmFEMEQljZN9EENOYywCI0Oox3s6WwIIZJiYG6y/2ehnL+B+xVg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<p-galleria
+[value]="data"
+[showItemNavigators]="true"
+[showThumbnails]="false"
+[showIndicators]="false"
+[showIndicatorsOnItem]="true"
+[circular]="true"
+[autoPlay]="true"
+[responsiveOptions]="responsiveOptions"
+>
+
+<ng-template pTemplate="item" let-item>
+  <img
+    [src]="getImageUrl(item.id)"
+    style="width: 100%; display: block"
+  />
+</ng-template>
+<ng-template pTemplate="thumbnail" let-item>
+  <div class="grid grid-nogutter justify-content-center">
+    <img [src]="getImageUrl(item.id)" style="display: block" />
+  </div>
+</ng-template>
+</p-galleria>
+
+
+<div class="container-fluid back">
+  
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-12"> <!-- Remove the col-md-9 col-lg-6 classes -->
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  
+  <div>
+    <button *ngIf="gallery" (click)="back()" class="btn btn-primary justify-content-center" style="float: left;;">Back</button>  
+    <p *ngIf="gallery" class="text-center path">
+      <a (click)="back()" class="text-black no-underline" >Gallery</a> / {{folderName}}
+    </p>
+    <div class="gallery1" *ngIf="gallery" >
+    <div *ngFor="let data of sortImagesByFilename(images); let i = index" class="gallery-img">
+      <img  [src]="getImageUrl(data.id)" (click)="onPreviewImage(i)"
+      >
+    </div>
+  </div>
+  </div>
+
+  
+<div *ngIf="showMask" class="lightbox" animation2 #swipeElement (touchstart)="onTouchStart($event)"
+(touchend)="onTouchEnd($event)" (window:keydown)="onKeyDown($event)" >
+<span *ngIf="showCount" class="count">{{ currentIndex + 1 }} / {{ images.length }}</span>
+<div *ngIf="previewImage" class="lightbox-img"
+  [@animation]="{value:'visible'}"
+  (@animation.done)="onAnimatedEnd($event)">
+  <img [src]="getImageUrl(currentLightboxImage.id) " (click)="closeLightbox()">
+</div> 
+</div>
+
+<div class=" back" *ngIf="!gallery" >
+   <div class="keen-slider" #sliderRef>
+    <div *ngFor="let item of Banner" class="keen-slider__slide">
+      <img [src]="getImageUrl(item.id)" style="width: 100%; display: block;" />
+    </div>
+   </div>
+</div>
+  <br>
+  <br>
+
+<div class="row">
+    <ng-container *ngIf="!gallery" >
+      <div class="col-md-4" *ngFor="let item of buttonsAndImages" style="cursor: pointer;">
+        <div class="card mb-4">
+          <a (click)="navigateToAnotherComponent(item.id, item.title)">
+            <img [src]="item.imageSrc" class="card-img-top" alt="{{ item.title }}">
+          </a>
+          <div class="card-body">
+            {{ item.title }}
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  
+  
+  
+</div>
+
+
+
+  <app-footer></app-footer>

@@ -1,0 +1,522 @@
+<app-header></app-header>
+
+
+<section class="we-offer-area text-center bg-gray back">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="site-heading text-center">
+                  <h2>What we <span>Offer</span></h2>
+                  <h4 style="color: white;"> What's you love</h4>
+              </div>
+          </div>
+      </div>
+          <div class="row our-offer-items less-carousel" style="cursor: pointer;" >
+              <!-- Single Item -->
+              <div class="col-md-4 col-sm-6 equal-height">
+                  <div class="item" routerLink="/Portfolio/SmallEvent/SaurashtraEngagement">
+                      <img src="../../assets/icons/ring.png" width="100px" style="object-fit: cover;">
+                      <h4>Engagement </h4>
+                      <p>
+                        Capturing Love Stories in Every Frame.
+                      </p>
+                  </div>
+              </div>
+              <!-- End Single Item -->
+
+              <!-- Single Item -->
+              <div class="col-md-4 col-sm-6 equal-height">
+                  <div class="item" routerLink="/Portfolio/GrandEvent/SaurashtraWedding" >
+                    <img src="../../assets/icons/wedding.png" width="100px" style="object-fit: cover;">
+
+                    <h4>Wedding</h4>
+                      <p>
+                        Cherishing Precious Moments of Innocence.
+                      </p>
+                  </div>
+              </div>
+              <!-- End Single Item -->
+
+              <!-- Single Item -->
+              <div class="col-md-4 col-sm-6 equal-height">
+                  <div class="item" routerLink="/Portfolio/SmallEvent/BabyShower">
+                    <img src="../../assets/icons/baby.png" width="100px" style="object-fit: cover;">
+
+                    <h4>Baby Shower </h4>
+                      <p>
+                        Sealing Love in Every Click.
+                      </p>
+                  </div>
+              </div>
+              <!-- End Single Item -->
+
+              <!-- Single Item -->
+              <div class="col-md-4 col-sm-6 equal-height">
+
+                <div class="item" routerLink="/Portfolio/SmallEvent/Birthday">
+                  <img src="../../assets/icons/birthday.png" width="100px" style="object-fit: cover;">
+
+                      <h4>Birthday</h4>
+                      <p>
+                        Capturing Moments, Creating Memories.
+                      </p>
+                  </div>
+              </div>
+              <!-- End Single Item -->
+
+              <!-- Single Item -->
+              <div class="col-md-4 col-sm-6 equal-height">
+                  <div class="item" routerLink="/Portfolio/SmallEvent/HalfSaree">
+                    <img src="../../assets/icons/saree.png" width="100px" style="object-fit: cover;">
+
+                    <h4>Half Saree Ceremony</h4>
+                      <p>
+                        Celebrating Life's Milestones.
+                      </p>
+                  </div>
+              </div>
+              <!-- End Single Item -->
+
+              <!-- Single Item -->
+              <div class="col-md-4 col-sm-6 equal-height">
+
+                <div class="item" routerLink="/Portfolio/SmallEvent/EarPiercing">
+                  <img src="../../assets/icons/ear.png" width="100px" style="object-fit: cover;">
+
+                      <h4>Ear Piercing</h4>
+                      <p>
+                        Embracing the Journey to Adulthood.
+                      </p>
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-6 equal-height">
+                <div class="item" routerLink="/Portfolio/SmallEvent/HouseWarming">
+                  <img src="../../assets/icons/home1.png" width="100px" style="object-fit: cover;">
+                    <h4>House Warming Ceremony </h4>
+                    <p>
+                      Capturing Love Stories in Every Frame.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 equal-height">
+              <div class="item" routerLink="/Portfolio/SmallEvent/Anniverisery">
+                  <img src="../../assets/icons/anni.png" width="100px" style="object-fit: cover;">
+                  <h4>Anniversaaries</h4>
+                  <p>
+                    Capturing Love Stories in Every Frame.
+                  </p>
+              </div>
+          </div>
+          <div class="col-md-4 col-sm-6 equal-height">
+            <div class="item" routerLink="/Portfolio/OutDoor/Model">
+                <img src="../../assets/icons/vlog.png" width="100px"  style="object-fit: cover;">
+                <h4>Vlog</h4>
+                <p>
+                  Capturing Love Stories in Every Frame.
+                </p>
+            </div>
+        </div>
+              <!-- End Single Item -->
+          </div>
+  </div>
+</section>
+
+
+<section class=" py-3 py-md-5 py-xl-8 back">
+<div class="site-heading text-center">
+  <h2 style="color: #0087b1;" >Accomplishments Over the Years</h2>
+</div>
+<div class="container">
+  <div class="row">
+    <br />
+    <div class="col text-center">
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col">
+      <div class="counter">
+        <i class="fa-solid fa-camera fa-bounce" style="color: #b1d110;"></i>
+        <h2
+          class="timer count-title count-number"
+          [countUp]="count" [duration]="duration"
+        ></h2>
+        <p class="count-text">Projects Done⠀⠀</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="counter">
+        <i class="fa-solid fa-user fa-bounce" style="color: #b1d110;"></i>
+        <h2
+          class="timer count-title count-number"
+          [countUp]="count1" [duration]="duration"
+        ></h2>
+        <p class="count-text">Years of Experience</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="counter">
+        <i class="fa-solid fa-star fa-bounce" style="color: #b1d110;"></i>
+        <h2
+          class="timer count-title count-number"
+          [countUp]="count2" [duration]="duration"></h2>
+        <p class="count-text"> Award Winning⠀⠀</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container">
+  <app-blogs></app-blogs>
+
+</div>
+
+
+<div class="responsive-container-block outer-container back">
+  <div class="responsive-container-block inner-container">
+    <p class="text-blk section-head-text">
+      Meet Our Expert Instructors
+    </p>
+    <p class="text-blk section-subhead-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </p>
+    <div class="responsive-container-block">
+      <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+        <div class="team-card">
+          <div class="img-wrapper">
+            <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert1.png">
+          </div>
+          <p class="text-blk name">
+            Maxwell Doe
+          </p>
+          <p class="text-blk position">
+            Instructor
+          </p>
+          <div class="social-media-links">
+            <a href="http://www.twitter.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+            </a>
+            <a href="http://www.facebook.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+            </a>
+            <a href="http://www.instagram.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+            </a>
+            <a href="http://www.gmail.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+        <div class="team-card">
+          <div class="img-wrapper">
+            <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert2.png">
+          </div>
+          <p class="text-blk name">
+            Maxwell Doe
+          </p>
+          <p class="text-blk position">
+            Instructor
+          </p>
+          <div class="social-media-links">
+            <a href="http://www.twitter.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+            </a>
+            <a href="http://www.facebook.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+            </a>
+            <a href="http://www.instagram.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+            </a>
+            <a href="http://www.gmail.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+        <div class="team-card">
+          <div class="img-wrapper">
+            <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert1.png">
+          </div>
+          <p class="text-blk name">
+            Maxwell Doe
+          </p>
+          <p class="text-blk position">
+            Instructor
+          </p>
+          <div class="social-media-links">
+            <a href="http://www.twitter.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+            </a>
+            <a href="http://www.facebook.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+            </a>
+            <a href="http://www.instagram.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+            </a>
+            <a href="http://www.gmail.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+        <div class="team-card">
+          <div class="img-wrapper">
+            <img class="team-img" src="../../assets/About/Aravi - 1png.png">
+          </div>
+          <p class="text-blk name">
+            Maxwell Doe
+          </p>
+          <p class="text-blk position">
+            Instructor
+          </p>
+          <div class="social-media-links">
+            <a href="http://www.twitter.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+            </a>
+            <a href="http://www.facebook.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+            </a>
+            <a href="http://www.instagram.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+            </a>
+            <a href="http://www.gmail.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+        <div class="team-card">
+          <div class="img-wrapper">
+            <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert1.png">
+          </div>
+          <p class="text-blk name">
+            Maxwell Doe
+          </p>
+          <p class="text-blk position">
+            Instructor
+          </p>
+          <div class="social-media-links">
+            <a href="http://www.twitter.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+            </a>
+            <a href="http://www.facebook.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+            </a>
+            <a href="http://www.instagram.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+            </a>
+            <a href="http://www.gmail.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+        <div class="team-card">
+          <div class="img-wrapper">
+            <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert2.png">
+          </div>
+          <p class="text-blk name">
+            Maxwell Doe
+          </p>
+          <p class="text-blk position">
+            Instructor
+          </p>
+          <div class="social-media-links">
+            <a href="http://www.twitter.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+            </a>
+            <a href="http://www.facebook.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+            </a>
+            <a href="http://www.instagram.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+            </a>
+            <a href="http://www.gmail.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+        <div class="team-card">
+          <div class="img-wrapper">
+            <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert1.png">
+          </div>
+          <p class="text-blk name">
+            Maxwell Doe
+          </p>
+          <p class="text-blk position">
+            Instructor
+          </p>
+          <div class="social-media-links">
+            <a href="http://www.twitter.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+            </a>
+            <a href="http://www.facebook.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+            </a>
+            <a href="http://www.instagram.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+            </a>
+            <a href="http://www.gmail.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+        <div class="team-card">
+          <div class="img-wrapper">
+            <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert2.png">
+          </div>
+          <p class="text-blk name">
+            Maxwell Doe
+          </p>
+          <p class="text-blk position">
+            Instructor
+          </p>
+          <div class="social-media-links">
+            <a href="http://www.twitter.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+            </a>
+            <a href="http://www.facebook.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+            </a>
+            <a href="http://www.instagram.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+            </a>
+            <a href="http://www.gmail.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+        <div class="team-card">
+          <div class="img-wrapper">
+            <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert1.png">
+          </div>
+          <p class="text-blk name">
+            Maxwell Doe
+          </p>
+          <p class="text-blk position">
+            Instructor
+          </p>
+          <div class="social-media-links">
+            <a href="http://www.twitter.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+            </a>
+            <a href="http://www.facebook.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+            </a>
+            <a href="http://www.instagram.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+            </a>
+            <a href="http://www.gmail.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+        <div class="team-card">
+          <div class="img-wrapper">
+            <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert2.png">
+          </div>
+          <p class="text-blk name">
+            Maxwell Doe
+          </p>
+          <p class="text-blk position">
+            Instructor
+          </p>
+          <div class="social-media-links">
+            <a href="http://www.twitter.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+            </a>
+            <a href="http://www.facebook.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+            </a>
+            <a href="http://www.instagram.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+            </a>
+            <a href="http://www.gmail.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+        <div class="team-card">
+          <div class="img-wrapper">
+            <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert1.png">
+          </div>
+          <p class="text-blk name">
+            Maxwell Doe
+          </p>
+          <p class="text-blk position">
+            Instructor
+          </p>
+          <div class="social-media-links">
+            <a href="http://www.twitter.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+            </a>
+            <a href="http://www.facebook.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+            </a>
+            <a href="http://www.instagram.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+            </a>
+            <a href="http://www.gmail.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+        <div class="team-card">
+          <div class="img-wrapper">
+            <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert2.png">
+          </div>
+          <p class="text-blk name">
+            Maxwell Doe
+          </p>
+          <p class="text-blk position">
+            Instructor
+          </p>
+          <div class="social-media-links">
+            <a href="http://www.twitter.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+            </a>
+            <a href="http://www.facebook.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+            </a>
+            <a href="http://www.instagram.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+            </a>
+            <a href="http://www.gmail.com/" target="_blank">
+              <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+            </a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+</section>
+
+<link
+  rel="stylesheet"
+  href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"
+/>
+
+<!-- <h1 [countUp]="count" [duration]="duration"></h1> -->
+
+  <app-footer></app-footer>
+

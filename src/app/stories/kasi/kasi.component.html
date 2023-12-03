@@ -1,0 +1,39 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <br>
+                <br>
+                <img src="../../../assets/s/02. Kasiyathirai.png" class="img-fluid" alt="Wedding Reception">
+                <p  style="font-family: cursive; font-size: 20px; text-align: justify;">
+                    Kaasi Yathirai is a traditional practice that is still prevalent in many South Indian weddings, and it is considered a vital part of the pre-wedding ceremonies. This practice is generally performed by the groom and his family members before the wedding day. The groom, along with his close relatives, travels to the holy city of Kasi or Varanasi, considered a sacred city in Hinduism, to offer prayers for the well-being of the couple and their future together. This practice is also known as Kasi Yatra, and it is believed to bring good luck and prosperity to the couple.                </p>
+                <p  style="font-family: cursive; font-size: 20px; text-align: justify">
+                    The groom usually performs this ritual wearing a traditional dhoti and carries a bamboo stick, a water pot (kumbh), and an umbrella. The bamboo stick symbolizes the groom's transition from a bachelor to a responsible husband, while the water pot signifies the importance of water, a precious element that sustains life. The umbrella represents the shelter and protection that the groom will provide to his future wife. The groom and his family members then visit various temples in Kasi and offer prayers seeking the blessings of the divine for prosperity and happiness. After the completion of the ceremony, the groom returns to the wedding venue, where the bride and her family members welcome him with open arms. Kaasi Yathirai is a beautiful and enriching ritual that captures the essence of Hindu traditions and the significance of the bond between the bride and groom.                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="gallery-lightbox-container">
+            <div class="gallery">
+              <div *ngFor="let data of sortImagesByFilename(images); let i = index" class="gallery-img">
+                <img  [src]="getImageUrl(data.id)" (click)="onPreviewImage(i)">
+              </div>
+            </div>
+            <div *ngIf="showMask" class="lightbox" animation2 #swipeElement (touchstart)="onTouchStart($event)"
+            (touchend)="onTouchEnd($event)" (window:keydown)="onKeyDown($event)" >
+            <span *ngIf="showCount" class="count">{{ currentIndex + 1 }} / {{ images.length }}</span>
+            <button *ngIf="previewImage" class="close-btn">
+              <i class="fa-thin fa-rotate fa-spin" style="color: #ffffff;"></i>
+            </button>
+            
+            <div *ngIf="previewImage" class="lightbox-img"
+              [@animation]="{value:'visible'}"
+              (@animation.done)="onAnimatedEnd($event)">
+              <img [src]="getImageUrl(currentLightboxImage.id) " (click)="closeLightbox()">
+            </div> 
+            </div>
+          </div>
+    </div>
+</div>
+

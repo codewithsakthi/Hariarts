@@ -1,0 +1,39 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <br>
+                <br>
+                <img src="../../../assets/s/08. Mehandi.png" class="img-fluid" alt="Wedding Reception">
+                <p style="font-family: cursive; font-size: 20px; text-align: justify;">
+                    Mehndi, also known as henna tattooing, is an integral part of Indian weddings and is one of the most popular pre-wedding ceremonies. It is a traditional art form that involves drawing intricate designs on the hands and feet of the bride and groom, using henna paste. The ritual of applying mehndi can be traced back hundreds of years, and it is believed to have originated in India, Egypt, and the Middle East. Mehndi is not just a form of decoration but is considered a sacred and auspicious ritual that brings good luck and prosperity to the couple.                </p>
+                <p  style="font-family: cursive; font-size: 20px; text-align: justify">
+                    One of the fascinating aspects of Mehndi is the symbolism behind the intricate designs. The designs often feature peacock, lotus, and paisley motifs, which are believed to bring good fortune, purity, and beauty. The darker the colour of the mehndi, the more it is believed to signify the strength of the love between the couple. Mehndi artists use their artistic skills to create unique and personalised designs that represent the couple's interests, personality, and cultural background. The ceremony of applying mehndi can take several hours, providing an excellent opportunity for the bride and groom to relax and enjoy spending time with their family and friends before the wedding ceremony. Overall, Mehndi is much more than a ceremony, it's an art form that provides a glimpse into the rich cultural heritage of India.                 </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="gallery-lightbox-container">
+            <div class="gallery">
+              <div *ngFor="let data of sortImagesByFilename(images); let i = index" class="gallery-img">
+                <img  [src]="getImageUrl(data.id)" (click)="onPreviewImage(i)">
+              </div>
+            </div>
+            <div *ngIf="showMask" class="lightbox" animation2 #swipeElement (touchstart)="onTouchStart($event)"
+            (touchend)="onTouchEnd($event)" (window:keydown)="onKeyDown($event)" >
+            <span *ngIf="showCount" class="count">{{ currentIndex + 1 }} / {{ images.length }}</span>
+            <button *ngIf="previewImage" class="close-btn">
+              <i class="fa-thin fa-rotate fa-spin" style="color: #ffffff;"></i>
+            </button>
+            
+            <div *ngIf="previewImage" class="lightbox-img"
+              [@animation]="{value:'visible'}"
+              (@animation.done)="onAnimatedEnd($event)">
+              <img [src]="getImageUrl(currentLightboxImage.id) " (click)="closeLightbox()">
+            </div> 
+            </div>
+          </div>
+    </div>
+</div>
+

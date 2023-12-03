@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <br>
+                <br>
+                <img src="../../../assets/s/07. Sangeet.png" class="img-fluid" alt="Wedding Reception">
+                <p  style="font-family: cursive; font-size: 20px; text-align: justify;">
+                    Sangeet is one of the most significant pre-wedding ceremonies in the Indian wedding culture. It is an occasion where the bride and groom's families get together to celebrate their union through music, dance, and a lavish feast. This ceremony is typically held on the eve of the wedding day and is often a lively and joyous affair that lasts until the early hours of the morning.                </p>
+                <p  style="font-family: cursive; font-size: 20px; text-align: justify">
+                    The word "Sangeet" in Sanskrit means "music," which is the cornerstone of this ceremony. It is an event where the families showcase their joy and enthusiasm for the upcoming wedding through music and dance performances. Traditionally, Sangeet was an exclusive affair attended only by close family and friends of the bride and groom. However, with the changing times, Sangeet has evolved and become more extravagant, with professional performers and choreographers being hired to put together a grand show. Sangeet ceremonies also present an opportunity for both families to come together, break the ice, and get to know each other before the wedding day. The significance of Sangeet in  Indian weddings cannot be overstated, as it adds a touch of tradition, culture, and joy to the wedding celebrations.
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="gallery-lightbox-container">
+            <div class="gallery">
+              <div *ngFor="let data of sortImagesByFilename(images); let i = index" class="gallery-img">
+                <img  [src]="getImageUrl(data.id)" (click)="onPreviewImage(i)">
+              </div>
+            </div>
+            <div *ngIf="showMask" class="lightbox" animation2 #swipeElement (touchstart)="onTouchStart($event)"
+            (touchend)="onTouchEnd($event)" (window:keydown)="onKeyDown($event)" >
+            <span *ngIf="showCount" class="count">{{ currentIndex + 1 }} / {{ images.length }}</span>
+            <button *ngIf="previewImage" class="close-btn">
+              <i class="fa-thin fa-rotate fa-spin" style="color: #ffffff;"></i>
+            </button>
+            
+            <div *ngIf="previewImage" class="lightbox-img"
+              [@animation]="{value:'visible'}"
+              (@animation.done)="onAnimatedEnd($event)">
+              <img [src]="getImageUrl(currentLightboxImage.id) " (click)="closeLightbox()">
+            </div> 
+            </div>
+          </div>
+    </div>
+</div>
+

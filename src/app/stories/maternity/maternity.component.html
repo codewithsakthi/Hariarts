@@ -1,0 +1,42 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <br>
+                <br>
+                <img src="../../../assets/s/10. Half Saree.png" class="img-fluid" alt="Wedding Reception">
+                <p  style="font-family: cursive; font-size: 20px; text-align: justify;">
+                  Half Saree Ceremony : he half saree ceremony is a coming-of-age ceremony in South India that celebrates a girl's first menstruation and transition into womanhood. The ceremony is usually performed when the girl is 9, 11, or 13 years old. The ceremony signifies that the girl is ready for marriage and is mature enough to understand her responsibilities to her family and society. The ceremony involves the girl wearing a traditional outfit called a Langa Voni. The outfit is a skirt and sari outfit, also known as a half-sari. The girl receives gifts and is adorned with jewelry.The ceremony also includes relatives and family members tying the waistband or dora to keep the saree secure, and performing traditional prayers. The ceremony is celebrated like a wedding function.
+
+
+
+
+                    <p  style="font-family: cursive; font-size: 20px; text-align: justify">
+                      Why is the occasion of a girl attaining puberty celebrated in a big way in certain Indian households? During olden days, parents of the girl wanted others to know that they have girl at home to get married. so they conducted ceremonies to let others know about their girl. It also shows the pride of the family.            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+      <div class="gallery-lightbox-container">
+          <div class="gallery">
+            <div *ngFor="let data of sortImagesByFilename(images); let i = index" class="gallery-img">
+              <img  [src]="getImageUrl(data.id)" (click)="onPreviewImage(i)">
+            </div>
+          </div>
+          <div *ngIf="showMask" class="lightbox" animation2 #swipeElement (touchstart)="onTouchStart($event)"
+          (touchend)="onTouchEnd($event)" (window:keydown)="onKeyDown($event)" >
+          <span *ngIf="showCount" class="count">{{ currentIndex + 1 }} / {{ images.length }}</span>
+          <button *ngIf="previewImage" class="close-btn">
+            <i class="fa-thin fa-rotate fa-spin" style="color: #ffffff;"></i>
+          </button>
+          
+          <div *ngIf="previewImage" class="lightbox-img"
+            [@animation]="{value:'visible'}"
+            (@animation.done)="onAnimatedEnd($event)">
+            <img [src]="getImageUrl(currentLightboxImage.id) " (click)="closeLightbox()">
+          </div> 
+          </div>
+        </div>
+  </div>
+</div>
+

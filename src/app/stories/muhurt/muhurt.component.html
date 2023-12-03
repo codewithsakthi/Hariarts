@@ -1,0 +1,39 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <br>
+                <br>
+                <img src="../../../assets/s/03. Muhurtham.png" class="img-fluid" alt="Wedding Reception">
+                <p style="font-family: cursive; font-size: 20px; text-align: justify;">
+                    Wedding Muhurtham is a significant event in Indian weddings, representing the moment when the bride and groom exchange vows and promise to spend their lives together. It is auspicious and believed to bring prosperity, longevity, and happiness to the newlyweds. Customarily, Indian weddings have a fixed time slot for the Wedding Muhurtham, which is determined based on the position of the stars and planets. This event's timing is believed to be crucial, as it is believed to align with the couple's horoscopes, ensuring a blessed and harmonious union.                </p>
+                <p  style="font-family: cursive; font-size: 20px; text-align: justify">
+                    The Wedding Muhurtham traditions differ drastically based on the couple's culture and beliefs. Some of the popular Wedding Muhurtham rituals include the tying of Mangalsutra, which is a sacred necklace worn around the neck by the bride; Saptapadi, which is the seven vows taken by the bride and groom around the holy fire; and Sindoor Daan, where the groom applies Sindoor on the bride's forehead, symbolizing their marital bond. The Wedding Muhurtham event is also typically accompanied by lavish decorations and an elaborate feast for the guests to celebrate the couple's union.                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="gallery-lightbox-container">
+            <div class="gallery">
+              <div *ngFor="let data of sortImagesByFilename(images); let i = index" class="gallery-img">
+                <img  [src]="getImageUrl(data.id)" (click)="onPreviewImage(i)">
+              </div>
+            </div>
+            <div *ngIf="showMask" class="lightbox" animation2 #swipeElement (touchstart)="onTouchStart($event)"
+            (touchend)="onTouchEnd($event)" (window:keydown)="onKeyDown($event)" >
+            <span *ngIf="showCount" class="count">{{ currentIndex + 1 }} / {{ images.length }}</span>
+            <button *ngIf="previewImage" class="close-btn">
+              <i class="fa-thin fa-rotate fa-spin" style="color: #ffffff;"></i>
+            </button>
+            
+            <div *ngIf="previewImage" class="lightbox-img"
+              [@animation]="{value:'visible'}"
+              (@animation.done)="onAnimatedEnd($event)">
+              <img [src]="getImageUrl(currentLightboxImage.id) " (click)="closeLightbox()">
+            </div> 
+            </div>
+          </div>
+    </div>
+</div>
+

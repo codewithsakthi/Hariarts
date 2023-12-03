@@ -1,0 +1,134 @@
+<app-header1></app-header1>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/primeflex@3.3.1/primeflex.min.css">
+
+<div class="video-player-wrapper home">
+  <vg-player>
+    <vg-buffering></vg-buffering>
+
+    <video #video [vgMedia]="$any(media)" #media id="singleVideo"autoplay="true"  preload="auto" crossorigin loop muted>
+    <source src="../../assets/ban3.webm" type="video/mp4">
+    </video>
+  </vg-player>
+  </div>
+
+  <div class="home">
+<div class="home" style="padding:30px;">
+    <span class="block text-3xl font-bold mb-1 text-center" style="color:#a4d3dd">Video Categories</span>
+<div class="row">
+      <div class="col-md-4" style="cursor: pointer;">
+        <div class="card mb-4">
+          <a (click)="showDefault(true,'All Categories')">
+            <img src="https://c0.wallpaperflare.com/preview/81/87/653/man-working-camera-photography-thumbnail.jpg" class="card-img-top">
+          </a>
+          <div class="card-body">
+            All Categories
+          </div>
+        </div>
+      </div>
+            <div class="col-md-4" style="cursor: pointer;">
+        <div class="card mb-4">
+          <a (click)="showDefault1(true,'Reels / Shorts')">
+            <img src="https://c0.wallpaperflare.com/preview/81/87/653/man-working-camera-photography-thumbnail.jpg" class="card-img-top">
+          </a>
+          <div class="card-body">
+            Reels / Shorts
+          </div>
+        </div>
+      </div>
+            <div class="col-md-4" style="cursor: pointer;">
+        <div class="card mb-4">
+          <a (click)="showDefault2(true,'Teaser /  Candid Videos')">
+            <img src="https://c0.wallpaperflare.com/preview/81/87/653/man-working-camera-photography-thumbnail.jpg" class="card-img-top">
+          </a>
+          <div class="card-body">
+            Teaser /  Candid Videos
+          </div>
+        </div>
+      </div>
+  </div>
+    </div>
+
+
+    <div >  
+            <span class="block text-2xl font-bold mb-1 text-center" style="color:#a4d3dd">Reels /Save Date/ Story Telling</span>
+    </div>
+    <div class="keen-slider" #sliderRef>
+
+      <div *ngFor="let item of Banner" class="keen-slider__slide">
+        <img [src]="getImageUrl(item.id)" style="width: 100%; display: block;" />
+      </div>
+     </div>
+    <br>
+
+    <div >  
+            <span class="block text-2xl font-bold mb-1 text-center" style="color:#a4d3dd">Pre / Post Wedding</span>
+    </div>
+     <div class="keen-slider" #sliderRef1>
+      <div *ngFor="let item of Banner" class="keen-slider__slide">
+        <img [src]="getImageUrl(item.id)" style="width: 100%; display: block;" />
+      </div>
+     </div>
+    <br>
+
+    <div >  
+            <span class="block text-2xl font-bold mb-1 text-center" style="color:#a4d3dd">Candid Video / Cinematic Teaser</span>
+    </div>
+     <div class="keen-slider" #sliderRef2>
+      <div *ngFor="let item of Banner" class="keen-slider__slide">
+        <img [src]="getImageUrl(item.id)" style="width: 100%; display: block;" />
+      </div>
+     </div>
+</div>
+    <nz-drawer
+      [nzSize]="size"
+      [nzVisible]="visible"
+      nzPlacement="right"
+      [nzTitle]="name"
+      (nzOnClose)="close()"
+    >
+      <ng-container *nzDrawerContent>
+<div *ngIf="allvideo">
+  <ul>
+    <li><a routerLink="/TraditionalVideo">Traditional Video</a></li>
+    <li><a routerLink="/TraditionalHighlight">Traditional Highlight</a></li>
+    <li><a routerLink="/CinematicTeaser">Cinematic Teaser</a></li>
+    <li><a routerLink="/CinematicHighlights">Cinematic Highlight</a></li>
+    <li><a routerLink="/Reels">Reels / Shorts</a></li>
+    <li><a routerLink="/InvitationVideo">Invitation Video</a></li>
+    <li><a routerLink="/SaveDate">Save Date Video</a></li>
+    <li><a routerLink="/PrePostWedding">Pre / Post Wedding Video</a></li>
+    <li><a routerLink="/StoryTelling">Story Telling</a></li>
+  </ul>
+</div>
+
+  <div *ngIf="reels" >
+          <ul>
+    <li><a routerLink="/TraditionalVideo">Traditional Video</a></li>
+    <li><a routerLink="/TraditionalHighlight">Traditional Highlight</a></li>
+    <li><a routerLink="/CinematicTeaser">Cinematic Teaser</a></li>
+    <li><a routerLink="/CinematicHighlights">Cinematic Highlight</a></li>
+    <li><a routerLink="/Reels">Reels / Shorts</a></li>
+    <li><a routerLink="/InvitationVideo">Invitation Video</a></li>
+    <li><a routerLink="/SaveDate">Save Date Video</a></li>
+    <li><a routerLink="/PrePostWedding">Pre / Post Wedding Video</a></li>
+    <li><a routerLink="/StoryTelling">Story Telling</a></li>
+  </ul>
+  </div>
+  
+  <div *ngIf="candid" >
+  <ul>
+    <li><a routerLink="/TraditionalVideo">Traditional Video</a></li>
+    <li><a routerLink="/TraditionalHighlight">Traditional Highlight</a></li>
+    <li><a routerLink="/CinematicTeaser">Cinematic Teaser</a></li>
+    <li><a routerLink="/CinematicHighlights">Cinematic Highlight</a></li>
+    <li><a routerLink="/Reels">Reels / Shorts</a></li>
+    <li><a routerLink="/InvitationVideo">Invitation Video</a></li>
+    <li><a routerLink="/SaveDate">Save Date Video</a></li>
+    <li><a routerLink="/PrePostWedding">Pre / Post Wedding Video</a></li>
+    <li><a routerLink="/StoryTelling">Story Telling</a></li>
+  </ul>
+</div>
+      </ng-container>
+    </nz-drawer>
+
+<app-footer></app-footer>

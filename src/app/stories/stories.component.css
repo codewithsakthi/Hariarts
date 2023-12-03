@@ -1,0 +1,186 @@
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size:contain; /* Adjust to control how the image covers the container */
+    background-position: center center; /* Center the image both horizontally and vertically */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    height: 100vh; /* Set the container height to the viewport height */
+    z-index: -1;
+    height: 100vh;
+    position: absolute;
+    top: -33px;
+    opacity: 50%;
+    left: 0;
+    right: 0;
+  }
+  .invisible {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  @media screen and (max-width: 768px) {
+    /* Adjust styles for screens up to 768px wide */
+    h1 {
+      font-size: 24px; /* Example: Decrease font size for smaller screens */
+    }
+.invisible img{
+    height: 345px;
+}
+  }
+  
+
+  .angry-grid {
+    display: grid; 
+ 
+    grid-template-rows: 100px 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+    gap: 0px;
+    height:800px;
+    width:100%;
+ }
+   
+ #item-0 {
+    height: 100px;
+    grid-row-start: 1;
+    grid-column-start: 1;
+ 
+    grid-row-end: 2;
+    grid-column-end: 3;
+    box-sizing: border-box;
+    
+ }
+ #item-1 {
+ 
+    grid-row-start: 1;
+    grid-column-start: 3;
+    grid-row-end: 3;
+    grid-column-end: 5;   
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+ }
+ #item-1 img {
+  max-width: 100%; /* Ensure the image doesn't exceed the container size */
+  max-height: 100%; /* Ensure the image doesn't exceed the container size */
+  display: block; /* Remove any extra spacing around the image */
+  border: white;
+  border-width: 2px;
+  padding: 20px;
+}
+h1 {
+  font-family: "Playfair Display SC", Georgia, "Times New Roman", serif;
+  font-size: 45px;
+  /* Add any other desired styles here */
+}
+
+#item-3 img {
+  max-width: 100%; /* Ensure the image doesn't exceed the container size */
+  max-height: 100%; /* Ensure the image doesn't exceed the container size */
+  display: block; /* Remove any extra spacing around the image */
+}
+
+ #item-2 {
+ 
+    grid-row-start: 3;
+    grid-column-start: 3;
+    grid-row-end: 4;
+    grid-column-end: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+   
+ 
+    
+ }
+ #item-3 {
+ 
+    grid-row-start: 2;
+    grid-column-start: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    grid-row-end: 4;
+    grid-column-end: 3;
+    
+ }
+ 
+ html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.story {
+  background-color: #f9fcff;
+  background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
+}
+

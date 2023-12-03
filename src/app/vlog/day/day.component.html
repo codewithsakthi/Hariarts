@@ -1,0 +1,190 @@
+<app-header></app-header>
+
+
+
+<div>
+
+<div *ngIf="folderName != 'Videos'">
+
+  <div *ngIf="Banner" (window:keydown)="onKeyDown($event)" class="container-fluid home">
+    <h1 style="color: #0087b1;" class="text-center custom-heading1 ">{{ folderName }}</h1>
+  
+    <div class="gallery1"(window:keydown)="onKeyDown($event)">
+      <div
+        *ngFor="
+          let data of sortImagesByFilename(Banner);
+          let i = index
+        "
+        class="gallery-img"
+      >
+      <ng-container *ngIf="!imageLoaded">
+        <!-- Loading animation with spinner -->
+        <div class="loading-animation">
+          <div ></div>
+              <img  src="../../../../assets/preloader.svg" alt="Loading Spinner" style="height: 50px;" >
+        </div>
+      </ng-container>
+        <img style="  border: 1px solid #ccc;
+        "
+          [src]="getImageUrl(data.id)"
+          (click)="onPreviewImage(i)"
+          (load)="imageLoaded = true" (error)="imageLoaded = false"
+        />      </div>
+      
+
+    </div>
+    <div
+    *ngIf="showMask"
+    class="lightbox"
+    animation2
+    #swipeElement
+    (touchstart)="onTouchStart($event)"
+    (touchend)="onTouchEnd($event)"
+    >
+    >
+    <span *ngIf="showCount" class="count"
+      >{{ currentIndex + 1 }} /
+      {{ Banner.length }}</span
+    >
+    <button
+      *ngIf="previewImage"
+      class="close-btn"
+      (click)="onClosePreview()"
+    >
+      <i class="fas fa-times" style="color: #ffffff"></i>
+    </button>
+    
+    <div
+      *ngIf="previewImage"
+      class="lightbox-img"
+      [@animation]="{ value: 'visible' }"
+      (@animation.done)="onAnimatedEnd($event)"
+    >
+      <img
+        [src]="getImageUrl(currentLightboxImage.id)"
+      />
+    </div>
+    </div>
+  </div>
+
+</div>
+
+<div *ngIf="folderName === 'Videos'">
+  <div>
+    <div class="row">
+      <div
+        *ngFor="
+          let image of sortImagesByFilename(Banner);
+          let i = index
+        "
+        class="col-md-4"
+      >
+        <div class="card video-thumbnail-card bezel-less-card">
+          <a
+            (click)="redirectToVideo(image.name)"
+            class="thumbnail-link"
+          >
+            <img
+              [src]="getImageUrl(image.id)"
+              class="thumbnail-image"
+            />
+            <div class="play-button-overlay">
+              <i class="fa fa-play-circle"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+    <!-- <div *ngIf="Banner" (window:keydown)="onKeyDown($event)" class="container-fluid home">
+      <h2 style="color: #0087b1;" class="text-center custom-heading1 ">{{ selectedFolder.name }}</h2>
+
+      <div *ngIf="selectedFolder.name === 'Videos'; else imageView">
+        <div>
+          <div class="row">
+            <div
+              *ngFor="
+                let image of sortImagesByFilename(Banner);
+                let i = index
+              "
+              class="col-md-4"
+            >
+              <div class="card video-thumbnail-card bezel-less-card">
+                <a
+                  (click)="redirectToVideo(image.name)"
+                  class="thumbnail-link"
+                >
+                  <img
+                    [src]="getImageUrl(image.id)"
+                    class="thumbnail-image"
+                  />
+                  <div class="play-button-overlay">
+                    <i class="fa fa-play-circle"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ng-template #imageView>
+        <div *ngIf="selectedFolder" (window:keydown)="onKeyDown($event)">
+          <br />
+          <br />
+        </div>
+
+        <div class="gallery1">
+          <div
+            *ngFor="
+              let data of sortImagesByFilename(Banner);
+              let i = index
+            "
+            class="gallery-img"
+          >
+            <img style="  border: 1px solid #ccc;
+            "
+              [src]="getImageUrl(data.id)"
+              (click)="onPreviewImage(i)"
+            />
+          </div>
+        </div>
+
+        <div
+          *ngIf="showMask"
+          class="lightbox"
+          animation2
+          #swipeElement
+          (touchstart)="onTouchStart($event)"
+          (touchend)="onTouchEnd($event)"
+        >
+          >
+          <span *ngIf="showCount" class="count"
+            >{{ currentIndex + 1 }} /
+            {{ Banner.length }}</span
+          >
+          <button
+            *ngIf="previewImage"
+            class="close-btn"
+            (click)="onClosePreview()"
+          >
+            <i class="fas fa-times" style="color: #ffffff"></i>
+          </button>
+
+          <div
+            *ngIf="previewImage"
+            class="lightbox-img"
+            [@animation]="{ value: 'visible' }"
+            (@animation.done)="onAnimatedEnd($event)"
+          >
+            <img
+              [src]="getImageUrl(currentLightboxImage.id)"
+            />
+          </div>
+        </div>
+      </ng-template>
+    </div> -->
