@@ -25,7 +25,8 @@ interface Data {
 @Component({
   selector: 'app-thiruparakundram',
   templateUrl: './thiruparakundram.component.html',
-  styleUrls: ['./thiruparakundram.component.css'],
+  styleUrls: ['./thiruparakundram.component.css',
+  '../../../../node_modules/keen-slider/keen-slider.min.css'],
   animations:[
     trigger('animation',[
       transition('void=>visible',[

@@ -25,7 +25,8 @@ interface Data {
 @Component({
   selector: 'app-saniswar',
   templateUrl: './saniswar.component.html',
-  styleUrls: ['./saniswar.component.css'],
+  styleUrls: ['./saniswar.component.css',
+  '../../../../node_modules/keen-slider/keen-slider.min.css'],
   animations:[
     trigger('animation',[
       transition('void=>visible',[

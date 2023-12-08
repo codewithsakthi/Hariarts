@@ -25,7 +25,8 @@ interface Data {
 @Component({
   selector: 'app-thallakulam',
   templateUrl: './thallakulam.component.html',
-  styleUrls: ['./thallakulam.component.css'],
+  styleUrls: ['./thallakulam.component.css',
+  '../../../../node_modules/keen-slider/keen-slider.min.css'],
   animations:[
     trigger('animation',[
       transition('void=>visible',[

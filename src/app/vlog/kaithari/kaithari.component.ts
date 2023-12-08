@@ -25,7 +25,8 @@ interface Data {
 @Component({
   selector: 'app-kaithari',
   templateUrl: './kaithari.component.html',
-  styleUrls: ['./kaithari.component.css'],
+  styleUrls: ['./kaithari.component.css',
+  '../../../../node_modules/keen-slider/keen-slider.min.css'],
   animations:[
     trigger('animation',[
       transition('void=>visible',[
