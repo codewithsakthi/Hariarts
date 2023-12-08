@@ -166,27 +166,25 @@
 	}
   </style>
 
-
-    <nz-water-mark nzContent="HariArts">
-		<div class="masonry-container">
-			<div class="masonry">
-			  <div class="mItem" *ngFor="let imageUrl of getCurrentPageImages()">
-				<img [src]="getImageUrl(imageUrl.id)">
-			  </div>
-			</div>
-			<ul class="custom-pagination text-center">
-			  <li class="custom-pagination-item" *ngIf="currentPage > 1">
-				<a href="javascript:void(0);" (click)="goToPage(currentPage - 1)">Previous</a>
-			  </li>
-			  <li class="custom-pagination-item" *ngFor="let page of getPageNumbers()" [ngClass]="{'active': page === currentPage}">
-				<a href="javascript:void(0);" (click)="goToPage(page)">{{ page }}</a>
-			  </li>
-			  <li class="custom-pagination-item" *ngIf="currentPage < getPageNumbers().length">
-				<a href="javascript:void(0);" (click)="goToPage(currentPage + 1)">Next</a>
-			  </li>
-			</ul>
+	<div class="masonry-container container ">
+		<div class="masonry">
+		  <div class="mItem" *ngFor="let imageUrl of getCurrentPageImages()">
+			<img [src]="getImageUrl(imageUrl.id)">
+		  </div>
 		</div>
-    </nz-water-mark>
+		<ul class="custom-pagination text-center">
+		  <li class="custom-pagination-item" *ngIf="currentPage > 1">
+			<a href="javascript:void(0);" (click)="goToPage(currentPage - 1)">Previous</a>
+		  </li>
+		  <li class="custom-pagination-item" *ngFor="let page of getPageNumbers()" [ngClass]="{'active': page === currentPage}">
+			<a href="javascript:void(0);" (click)="goToPage(page)">{{ page }}</a>
+		  </li>
+		  <li class="custom-pagination-item" *ngIf="currentPage < getPageNumbers().length">
+			<a href="javascript:void(0);" (click)="goToPage(currentPage + 1)">Next</a>
+		  </li>
+		</ul>
+	</div>
+		
 
   
   

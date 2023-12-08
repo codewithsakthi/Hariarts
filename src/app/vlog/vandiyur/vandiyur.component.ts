@@ -10,7 +10,9 @@ import { SortEvent } from 'primeng/api';
 import { Router } from '@angular/router';
 
 import KeenSlider, { KeenSliderInstance,KeenSliderPlugin } from "keen-slider"
-const animation = { duration: 30000, easing: (t: any) => t }
+const animation = { duration: 60000, easing: (t: any) => t }
+const animation1 = { duration: 30000, easing: (t: any) => t }
+
 interface Image {
   id: string;
   mimeType: string;
@@ -151,13 +153,13 @@ export class VandiyurComponent{
             spacing: 15,
           },
           created(s) {
-            s.moveToIdx(5, true, animation)
+            s.moveToIdx(5, true, animation1)
           },
           updated(s) {
-            s.moveToIdx(s.track.details.abs + 5, true, animation)
+            s.moveToIdx(s.track.details.abs + 5, true, animation1)
           },
           animationEnded(s) {
-            s.moveToIdx(s.track.details.abs + 5, true, animation)
+            s.moveToIdx(s.track.details.abs + 5, true, animation1)
           },
         });
       } 

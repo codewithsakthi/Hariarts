@@ -101,17 +101,24 @@
           class="collapse navbar-collapse ms-auto"
           id="navbarSupportedContent"
         >
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" routerLinkActive="active-link"  routerLink="/" ><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
-              </a> 
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" routerLinkActive="active-link"  routerLink="/About"
-                ><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="groups_2"></mat-icon>
-                </a
-              >
-            </li>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLinkActive="active-link" routerLink="/">
+              <div>
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon><br>
+                <span>Home</span>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLinkActive="active-link" routerLink="/About">
+              <div>
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="groups_2"></mat-icon><br>
+                <span>About</span>
+              </div>
+            </a>
+          </li>
+        
             <li class="nav-item active dropdown ">
               <a
                 class="nav-link active dropdown-toggle"
@@ -119,7 +126,8 @@
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-                ><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="rocket_launch"></mat-icon>
+                ><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="rocket_launch"></mat-icon><br>
+                <span>Portfolio</span>
 
               </a>
               <div
@@ -232,7 +240,8 @@ Out Door
             </li>
 
             <li class="nav-item">
-              <a class="nav-link active" routerLinkActive="active-link"  routerLink="/Gallery"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="collections"></mat-icon>
+              <a class="nav-link active" routerLinkActive="active-link"  routerLink="/Gallery"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="collections"></mat-icon><br>
+                <span>Gallery</span>
               </a>
             </li>
             <!-- Existing navigation code -->
@@ -244,7 +253,8 @@ Out Door
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-              <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="auto_stories"></mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="auto_stories"></mat-icon><br>
+              <span>Stories</span>
 
               </a>
               <!-- Dropdown menu for Stories -->
@@ -281,7 +291,8 @@ Out Door
                 aria-expanded="false"
                 routerLink="/Videos"
               >
-              <i class="fa-solid fa-video"></i>
+              <i class="fa-solid fa-video"></i><br>
+              <span>Videos</span>
               </a>
               <!-- Dropdown menu for Stories -->
               <div class="dropdown-menu" aria-labelledby="storiesDropdown">
@@ -320,7 +331,8 @@ Out Door
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-              <i class="fa-solid fa-gopuram"></i>
+              <i class="fa-solid fa-gopuram"></i><br>
+              <span>Temples</span>
                             </a>
               <!-- Dropdown menu for Stories -->
               <div class="dropdown-menu" aria-labelledby="storiesDropdown">
@@ -383,7 +395,8 @@ Out Door
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-              <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="celebration"></mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="celebration"></mat-icon><br>
+              <span>Celebration</span>
 
               </a>
               <!-- Dropdown menu for Stories -->
@@ -400,19 +413,27 @@ Out Door
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" routerLinkActive="active-link"  routerLink="/BookNow"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit_calendar"></mat-icon>
+              <a class="nav-link active" routerLinkActive="active-link"  routerLink="/BookNow">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit_calendar"></mat-icon><br>
+                <span>Book Now</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" routerLinkActive="active-link"  routerLink="/Packages"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="local_offer"></mat-icon>
+              <a class="nav-link active" routerLinkActive="active-link"  routerLink="/Packages">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="local_offer"></mat-icon><br>
+                <span>Packages</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" routerLinkActive="active-link"  routerLink="/Contact"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="perm_contact_calendar"></mat-icon>
+              <a class="nav-link active" routerLinkActive="active-link"  routerLink="/Contact">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="perm_contact_calendar"></mat-icon><br>
+                <span>Contact</span>
               </a>
             </li>
             <li>
-              <a class="nav-link active" routerLinkActive="active-link"  routerLink="/Premium"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="admin_panel_settings"></mat-icon>
+              <a class="nav-link active" routerLinkActive="active-link"  routerLink="/Premium">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="admin_panel_settings"></mat-icon><br>
+                <span>Premium</span>
               </a>
             </li>
           </ul>
@@ -446,43 +467,4 @@ Out Door
     transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
   }
 
-  .nav-link.active::before,
-  .nav-link.active::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    left: 0;
-  }
-
-  .nav-link.active::before {
-    background-color: #54b3d6;
-    height: 2px;
-    bottom: 0;
-    transform-origin: 100% 50%;
-    transform: scaleX(0);
-    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
-  }
-
-  .nav-link.active::after {
-    content: attr(data-replace);
-    height: 100%;
-    top: 0;
-    transform-origin: 100% 50%;
-    transform: translate3d(200%, 0, 0);
-    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
-    color: #54b3d6;
-  }
-
-  .nav-link.active:hover::before {
-    transform-origin: 0% 50%;
-    transform: scaleX(1);
-  }
-
-  .nav-link.active:hover::after {
-    transform: translate3d(0, 0, 0);
-  }
-
-  .nav-link.active:hover span {
-    transform: translate3d(-200%, 0, 0);
-  }
 </style>
