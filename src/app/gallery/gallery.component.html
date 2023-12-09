@@ -65,7 +65,7 @@
 <div class=" back" *ngIf="!gallery" >
    <div class="keen-slider" #sliderRef>
     <div *ngFor="let item of Banner" class="keen-slider__slide">
-      <img [src]="getImageUrl(item.id)" style="width: 100%; display: block;" />
+      <img [src]="getImageUrl(item.id)" style="width: 100%; display: block; border: 2px solid white;" />
     </div>
    </div>
 </div>
