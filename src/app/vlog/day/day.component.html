@@ -79,7 +79,7 @@
         "
         class="col-md-4"
       >
-        <div class="card video-thumbnail-card bezel-less-card">
+        <div class="card video-container">
           <a
             (click)="redirectToVideo(image.name)"
             class="thumbnail-link"
@@ -88,9 +88,8 @@
               [src]="getImageUrl(image.id)"
               class="thumbnail-image"
             />
-            <div class="play-button-overlay">
-              <i class="fa fa-play-circle"></i>
-            </div>
+            <div class="video-overlay"></div>
+
           </a>
         </div>
       </div>
