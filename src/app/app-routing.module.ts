@@ -76,6 +76,7 @@ import { CelebraComponent } from './celebra/celebra.component';
 import { Cele1Component } from './celebra/cele1/cele1.component';
 import { Cele2Component } from './celebra/cele2/cele2.component';
 import { Cele3Component } from './celebra/cele3/cele3.component';
+import { SrinivasaperumalComponent } from './vlog/srinivasaperumal/srinivasaperumal.component';
 
 
 const routes: Routes = [
@@ -127,6 +128,7 @@ const routes: Routes = [
   {path:"Vlogs",component:VlogsComponent},
   {path:"Kulasai",component:KulasaiComponent},
   {path:"Thiruparankundram",component:ThiruparakundramComponent},
+  {path:"Srinivasaperumal",component:SrinivasaperumalComponent},
   {path:"Angayarkanni",component:KaithariComponent},
   {path:"Saneeswarar",component:SaniswarComponent},
   {path:"Thallakulam",component:ThallakulamComponent},

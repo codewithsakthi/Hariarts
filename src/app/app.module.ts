@@ -136,6 +136,7 @@ import { CelebraComponent } from './celebra/celebra.component';
 import { Cele1Component } from './celebra/cele1/cele1.component';
 import { Cele2Component } from './celebra/cele2/cele2.component';
 import { Cele3Component } from './celebra/cele3/cele3.component';
+import { SrinivasaperumalComponent } from './vlog/srinivasaperumal/srinivasaperumal.component';
 
 
 registerLocaleData(en);
@@ -230,6 +231,7 @@ registerLocaleData(en);
     Cele1Component,
     Cele2Component,
     Cele3Component,
+    SrinivasaperumalComponent,
     
     
   ],
